@@ -1,0 +1,463 @@
+I want to implement a new feature into the chat I would like to support text to speech speech to Text.
+
+Chat Feature Implementation Important Informations
+
+/home/nitr0gen/ibrain2024/ibrain2024/app/chat/app
+├── [conversationId]
+│   ├── error.tsx
+│   ├── loading.tsx
+│   └── page.tsx
+├── actions
+│   └── chat-actions.ts
+├── components
+│   ├── chat
+│   │   ├── chat-input.tsx
+│   │   ├── chat-stream.tsx
+│   │   ├── message-item.tsx
+│   │   └── message-list.tsx
+│   └── ui
+│       ├── empty-state.tsx
+│       └── loading-skeleton.tsx
+├── lib
+│   ├── ai.ts
+│   ├── db.ts
+│   └── types.ts
+├── page.tsx
+└── schema.sql
+
+
+import { Suspense } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
+import { ChatInput } from "../components/chat/chat-input";
+import { ChatStream } from "../components/chat/chat-stream";
+import { MessageList } from "../components/chat/message-list";
+import { getMessages } from "../lib/db";
+import { Message } from "../lib/types";
+
+interface ChatPageProps {
+  params: Promise<{
+    conversationId: string;
+  }>;
+}
+
+export default async function ChatPage({ params }: ChatPageProps) {
+  const { conversationId } = await params;
+  const messages: Message[] = await getMessages(conversationId);
+  const lastMessage = messages[messages.length - 1];
+  const shouldStream = lastMessage?.role === "user";
+
+  return (
+    // Remove any margin/padding as it's handled by the parent layout
+    <div className="w-full -m-5">
+      {/* Chat container that takes up available vertical space */}
+      <div className="relative h-[calc(100vh-10rem)]">
+        {/* Messages container with scroll */}
+        <div className="absolute inset-0 bottom-16">
+          <div className="h-[calc(100vh-15rem)] overflow-y-auto flex flex-col-reverse">
+            <div className="flex-1 max-w-5xl mx-auto px-5">
+              <Suspense fallback={<Skeleton />}>
+                <MessageList messages={messages} />
+              </Suspense>
+
+              {shouldStream && (
+                <Suspense fallback={<Skeleton />}>
+                  <ChatStream
+                    message={lastMessage.content}
+                    conversationId={conversationId}
+                  />
+                </Suspense>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Fixed chat input at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 bg-background border-t">
+          <div className="max-w-5xl mx-auto px-5">
+            <ChatInput conversationId={conversationId} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+"use server";
+import { revalidatePath } from "next/cache";
+import { createClient } from "@/utils/supabase/server";
+import { Message } from "../lib/types";
+import { redirect } from "next/navigation";
+
+export async function getMessages(conversationId: string): Promise<Message[]> {
+  const supabase = await createClient();
+  
+  const { data, error } = await supabase
+    .from("messages")
+    .select("*")
+    .eq("conversation_id", conversationId)
+    .order("created_at", { ascending: true });
+
+  if (error) throw error;
+  return data as Message[];
+}
+
+export async function sendMessage(conversationId: string, formData: FormData) {
+  const message = formData.get("message");
+
+  if (!message || typeof message !== "string" || !conversationId) {
+    throw new Error("Invalid message or conversation ID");
+  }
+
+  const supabase = await createClient();
+
+  await supabase.from("messages").insert({
+    conversation_id: conversationId,
+    content: message,
+    role: "user",
+  });
+
+  revalidatePath(`/${conversationId}`);
+}
+
+export async function insertAssistantMessage(conversationId: string, content: string) {
+  const supabase = await createClient();
+
+  await supabase.from("messages").insert({
+    conversation_id: conversationId,
+    content: content,
+    role: "assistant",
+  });
+
+  revalidatePath(`/${conversationId}`);
+}
+
+export async function createConversation() {
+  const supabase = await createClient();
+
+  const { data: { user }, error: authError } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    redirect("/sign-in");
+  }
+
+  const { data, error: insertError } = await supabase
+    .from("conversations")
+    .insert({ user_id: user.id })
+    .select()
+    .single();
+
+  if (insertError) {
+    throw new Error("Failed to create conversation: " + insertError.message);
+  }
+
+  revalidatePath("/protected/chat");
+  return data;
+}
+
+
+'use client';
+
+import { useFormStatus } from 'react-dom';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { SendHorizontal } from 'lucide-react';
+import { sendMessage } from '../../actions/chat-actions';
+
+export function ChatInput({ 
+  conversationId 
+}: { 
+  conversationId: string 
+}) {
+  const { pending } = useFormStatus();
+  const sendMessageWithConversationId = sendMessage.bind(null, conversationId);
+
+  return (
+    <form 
+      action={sendMessageWithConversationId}
+      className="flex items-center gap-2 p-4 border-t"
+    >
+      <Input
+        name="message"
+        placeholder="Type a message..."
+        disabled={pending}
+        className="flex-1"
+      />
+      <Button type="submit" disabled={pending}>
+        <SendHorizontal className="h-4 w-4" />
+      </Button>
+    </form>
+  );
+}
+
+
+"use client";
+
+import { motion } from "framer-motion";
+import { Markdown } from "@/components/markdown";
+import { useEffect, useState } from "react";
+import { BotIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+interface ChatStreamProps {
+  message: string;
+  conversationId: string;
+}
+
+export function ChatStream({ message, conversationId }: ChatStreamProps) {
+  const [content, setContent] = useState("");
+  const [isStreaming, setIsStreaming] = useState(true);
+
+  useEffect(() => {
+    let mounted = true;
+
+    async function startStreaming() {
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ message, conversationId }),
+        });
+
+        const reader = response.body?.getReader();
+        const decoder = new TextDecoder();
+
+        if (!reader) return;
+
+        while (mounted) {
+          const { value, done } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value);
+          const lines = chunk.split("\n").filter((line) => line.trim());
+
+          for (const line of lines) {
+            try {
+              const { content, done } = JSON.parse(line);
+              if (done) {
+                setIsStreaming(false);
+                break;
+              }
+              if (mounted) {
+                setContent((prev) => prev + content);
+              }
+            } catch (e) {
+              console.error("Error parsing JSON:", e);
+            }
+          }
+        }
+      } catch (error) {
+        console.error("Error reading stream:", error);
+        setIsStreaming(false);
+      }
+    }
+
+    startStreaming();
+
+    return () => {
+      mounted = false;
+      setContent("");
+      setIsStreaming(true);
+    };
+  }, [message, conversationId]);
+
+  if (!content && !isStreaming) return null;
+
+  return (
+    <motion.div
+      className="flex flex-row gap-4 px-4 w-full md:w-[800px] md:px-0 first-of-type:pt-20"
+      initial={{ y: 5, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+    >
+      <div
+        className={`size-[36px] flex flex-col justify-center items-center flex-shrink-0 text-zinc-400 ${isStreaming ? "animate-pulse " : ""}`}
+      >
+        <BotIcon size={36} />
+      </div>
+      <div className="flex flex-col gap-1 items-start w-full">
+        <div className="p-4 rounded-lg max-w-[80%] bg-muted">
+          <Markdown>{content}</Markdown>
+          {isStreaming && (
+            <span className="inline-block animate-pulse ml-1 vertical-align-text-top">
+              ▋
+            </span>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+
+"use server";
+import ollama from "ollama";
+import { insertAssistantMessage } from "../actions/chat-actions";
+
+export async function streamLLMResponse(message: string, conversationId: string) {
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream({
+    async start(controller) {
+      try {
+        const response = await ollama.chat({
+          model: "qwen2.5-coder:7b",
+          messages: [{ role: "user", content: message }],
+          stream: true,
+        });
+
+        let accumulatedContent = "";
+        
+        for await (const part of response) {
+          accumulatedContent += part.message.content;
+          controller.enqueue(encoder.encode(JSON.stringify({ 
+            content: part.message.content,
+            done: false 
+          }) + '\n'));
+        }
+
+        await insertAssistantMessage(conversationId, accumulatedContent);
+        
+        controller.enqueue(encoder.encode(JSON.stringify({ 
+          content: '', 
+          done: true 
+        }) + '\n'));
+        controller.close();
+      } catch (error) {
+        console.error("Error streaming LLM response:", error);
+        controller.error(error);
+      }
+    }
+  });
+
+  return new Response(stream, {
+    headers: {
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache',
+      'Connection': 'keep-alive',
+    },
+  });
+}
+
+import { createClient } from "@/utils/supabase/server";
+import { Conversation, Message, MessageChunk } from "./types";
+
+export async function getMessages(conversationId: string) {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("messages")
+    .select("*")
+    .eq("conversation_id", conversationId)
+    .order("created_at", { ascending: true });
+
+  console.log(`DATA GET_MESSAGES `, data);
+
+  return data as Message[];
+}
+
+export async function getConversations() {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("conversations")
+    .select("*")
+    .order("last_message_at", { ascending: false });
+
+  return data as Conversation[];
+}
+
+import { Suspense } from 'react';
+import { getConversations } from './lib/db';
+import { Button } from '@/components/ui/button';
+import { createConversation } from './actions/chat-actions';
+import { MessageSquarePlus } from 'lucide-react';
+
+export default async function ChatHomePage() {
+  const conversations = await getConversations();
+
+  return (
+    <div className="container max-w-4xl py-4">
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">Conversations</h1>
+        <form action={createConversation}>
+          <Button>
+            <MessageSquarePlus className="h-4 w-4 mr-2" />
+            New Chat
+          </Button>
+        </form>
+      </div>
+      
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className="space-y-2">
+          {conversations.map(conversation => (
+            <Button
+              key={conversation.id}
+              variant="ghost"
+              className="w-full justify-start"
+              asChild
+            >
+              <a href={`/protected/chat/${conversation.id}`}>
+                Chat {new Date(conversation.created_at).toLocaleDateString()}
+              </a>
+            </Button>
+          ))}
+        </div>
+      </Suspense>
+    </div>
+  );
+}
+
+-- Enable UUID extension
+create extension if not exists "uuid-ossp";
+
+-- Conversations table
+create table conversations (
+  id uuid default uuid_generate_v4() primary key,
+  user_id uuid references auth.users not null,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  last_message_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- Messages table
+create table messages (
+  id uuid default uuid_generate_v4() primary key,
+  conversation_id uuid references conversations on delete cascade not null,
+  content text not null,
+  role text not null check (role in ('user', 'assistant')),
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+
+-- Enable RLS
+alter table conversations enable row level security;
+alter table messages enable row level security;
+
+-- RLS Policies
+create policy "Users can view own conversations"
+  on conversations for select
+  using (auth.uid() = user_id);
+
+create policy "Users can insert own conversations"
+  on conversations for insert
+  with check (auth.uid() = user_id);
+
+create policy "Users can view messages in own conversations"
+  on messages for select
+  using (
+    exists (
+      select 1
+      from conversations
+      where id = messages.conversation_id
+      and user_id = auth.uid()
+    )
+  );
+
+create policy "Users can insert messages in own conversations"
+  on messages for insert
+  with check (
+    exists (
+      select 1
+      from conversations
+      where id = conversation_id
+      and user_id = auth.uid()
+    )
+  );
