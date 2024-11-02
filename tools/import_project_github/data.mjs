@@ -1,5 +1,6 @@
 export const data = {
   project: {
+    title:"Plan",
     milestones: [
       {
         title: "Foundation and Core Integration",
