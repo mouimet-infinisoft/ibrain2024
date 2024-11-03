@@ -5,6 +5,7 @@ import { Markdown } from "@/components/markdown";
 import { Message } from "../../lib/types";
 import { cn } from "@/lib/utils";
 import { BotIcon, UserIcon } from "lucide-react";
+import { TextToSpeech } from "@/components/ui/text-to-speech";
 
 export function MessageItem({ message }: { message: Message }) {
   return (
@@ -17,13 +18,19 @@ export function MessageItem({ message }: { message: Message }) {
       animate={{ y: 0, opacity: 1 }}
     >
       <div className="size-[36px] flex flex-col justify-center items-center flex-shrink-0 text-zinc-400">
-        {message.role === "user" ? <UserIcon  size={36}/> : <BotIcon  size={36}/>}
+        {message.role === "user" ? (
+          <UserIcon size={36} />
+        ) : (
+          <BotIcon size={36} />
+        )}
       </div>
-      <div className={cn(
-        "flex flex-col gap-1",
-        message.role === "user" ? "items-end" : "items-start",
-        "w-full"
-      )}>
+      <div
+        className={cn(
+          "flex flex-col gap-1",
+          message.role === "user" ? "items-end" : "items-start",
+          "w-full"
+        )}
+      >
         <div
           className={cn(
             "p-4 rounded-lg",
@@ -34,6 +41,9 @@ export function MessageItem({ message }: { message: Message }) {
           )}
         >
           <Markdown>{message.content}</Markdown>
+          {message.role === "assistant" && (
+            <TextToSpeech text={message.content}  />
+          )}
         </div>
       </div>
     </motion.div>

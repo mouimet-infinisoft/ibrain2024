@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Markdown } from "@/components/markdown";
 import { useEffect, useState } from "react";
 import { BotIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { TextToSpeech } from "@/components/ui/text-to-speech";
 
 interface ChatStreamProps {
   message: string;
@@ -16,6 +16,9 @@ export function ChatStream({ message, conversationId }: ChatStreamProps) {
   const [isStreaming, setIsStreaming] = useState(true);
 
   useEffect(() => {
+    const abortController = new AbortController(); // Create an AbortController instance
+    const { signal } = abortController; // Extract the signal for fetch request
+
     let mounted = true;
 
     async function startStreaming() {
@@ -26,6 +29,7 @@ export function ChatStream({ message, conversationId }: ChatStreamProps) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ message, conversationId }),
+          signal, // Pass the signal to the fetch request
         });
 
         const reader = response.body?.getReader();
@@ -55,8 +59,12 @@ export function ChatStream({ message, conversationId }: ChatStreamProps) {
             }
           }
         }
-      } catch (error) {
-        console.error("Error reading stream:", error);
+      } catch (error:any) {
+        if (error.name === 'AbortError') {
+          console.log("Fetch aborted:", error);
+        } else {
+          console.error("Error reading stream:", error);
+        }
         setIsStreaming(false);
       }
     }
@@ -65,6 +73,7 @@ export function ChatStream({ message, conversationId }: ChatStreamProps) {
 
     return () => {
       mounted = false;
+      abortController.abort(); // Abort the fetch request if it's ongoing
       setContent("");
       setIsStreaming(true);
     };
@@ -91,6 +100,7 @@ export function ChatStream({ message, conversationId }: ChatStreamProps) {
               ▋
             </span>
           )}
+          {!isStreaming && <TextToSpeech text={content}/>}
         </div>
       </div>
     </motion.div>
