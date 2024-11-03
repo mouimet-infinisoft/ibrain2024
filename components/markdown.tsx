@@ -9,14 +9,14 @@ export const NonMemoizedMarkdown = ({ children }: { children: string }) => {
       return !inline && match ? (
         <span
           {...props}
-          className={`${className} text-sm w-[80dvw] md:max-w-[500px] bg-zinc-100 p-2 rounded mt-2 dark:bg-zinc-800 mx-4 `}
+          className={`${className} text-sm w-[80dvw] md:max-w-[500px] p-2 rounded mt-2 mx-4 `}
         >
           <h2 className="text-2xl font-bold mb-2">Code</h2>
           <code className={match[1]}>{children}</code>
         </span>
       ) : (
         <code
-          className={`${className} text-sm bg-zinc-100 dark:bg-zinc-800 rounded`}
+          className={`${className} text-sm rounded`}
           {...props}
         >
           `{children}`

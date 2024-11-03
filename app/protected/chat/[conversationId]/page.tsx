@@ -20,9 +20,9 @@ export default async function ChatPage({ params }: ChatPageProps) {
 
   return (
     // Remove any margin/padding as it's handled by the parent layout
-    <div className="w-full -m-5">
+    <div className="w-full">
       {/* Chat container that takes up available vertical space */}
-      <div className="relative h-[calc(100vh-10rem)]">
+      <div className="relative h-[calc(100vh-8rem)]">
         {/* Messages container with scroll */}
         <div className="absolute inset-0 bottom-16">
           <div className="h-[calc(100vh-15rem)] overflow-y-auto flex flex-col-reverse">
@@ -44,7 +44,7 @@ export default async function ChatPage({ params }: ChatPageProps) {
         </div>
 
         {/* Fixed chat input at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 bg-background border-t">
+        <div className="absolute bottom-0 left-0 right-0">
           <div className="max-w-5xl mx-auto px-5">
             <ChatInput conversationId={conversationId} />
           </div>

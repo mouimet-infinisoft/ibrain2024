@@ -25,7 +25,7 @@ export function ChatInput({ conversationId }: { conversationId: string }) {
   return (
     <form
       action={sendMessageWithConversationId}
-      className="flex items-center gap-2 p-4 border-t"
+      className="flex items-center gap-2 p-4"
     >
       <Input
         name="message"
