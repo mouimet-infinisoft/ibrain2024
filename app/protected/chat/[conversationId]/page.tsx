@@ -16,7 +16,6 @@ export default async function ChatPage({ params }: ChatPageProps) {
   const { conversationId } = await params;
   const messages: Message[] = await getMessages(conversationId);
   const lastMessage = messages[messages.length - 1];
-  const shouldStream = lastMessage?.role === "user";
 
   return (
     // Remove any margin/padding as it's handled by the parent layout
@@ -31,14 +30,12 @@ export default async function ChatPage({ params }: ChatPageProps) {
                 <MessageList messages={messages} />
               </Suspense>
 
-              {shouldStream && (
                 <Suspense fallback={<Skeleton />}>
                   <ChatStream
-                    message={lastMessage.content}
+                    message={lastMessage?.content ?? "The user just created this new discussion and you will weclome him."}
                     conversationId={conversationId}
                   />
                 </Suspense>
-              )}
             </div>
           </div>
         </div>

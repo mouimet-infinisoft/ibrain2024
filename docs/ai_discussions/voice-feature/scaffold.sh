@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Set error handling
 set -e
@@ -23,18 +23,18 @@ log_error() {
 }
 
 # Check if we're in the right directory
-if [ ! -d "app/chat" ]; then
-    log_error "Please run this script from the project root directory (where 'app/chat' directory exists)"
+if [ ! -d "app/protected/chat" ]; then
+    log_error "Please run this script from the project root directory (where 'app/protected/chat' directory exists)"
     exit 1
-}
+
 
 # Create necessary directories
 log_info "Creating speech components directory..."
-mkdir -p app/chat/components/speech
+mkdir -p app/protected/chat/components/speech
 
 # Create speech-to-text component
 log_info "Creating speech-to-text component..."
-cat > app/chat/components/speech/speech-to-text.tsx << 'EOL'
+cat > app/protected/chat/components/speech/speech-to-text.tsx << 'EOL'
 import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Mic, MicOff } from 'lucide-react';
@@ -110,7 +110,7 @@ EOL
 
 # Create text-to-speech component
 log_info "Creating text-to-speech component..."
-cat > app/chat/components/speech/text-to-speech.tsx << 'EOL'
+cat > app/protected/chat/components/speech/text-to-speech.tsx << 'EOL'
 import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Volume2, VolumeX } from 'lucide-react';
@@ -178,7 +178,7 @@ EOL
 
 # Update types.ts
 log_info "Updating types.ts..."
-cat >> app/chat/lib/types.ts << 'EOL'
+cat >> app/protected/chat/lib/types.ts << 'EOL'
 
 // Speech recognition types
 declare global {
@@ -192,7 +192,7 @@ EOL
 # Update message-item.tsx
 log_info "Updating message-item component..."
 # Create a backup first
-cp app/chat/components/chat/message-item.tsx app/chat/components/chat/message-item.tsx.bak
+cp app/protected/chat/components/chat/message-item.tsx app/protected/chat/components/chat/message-item.tsx.bak
 
 # Update the file using sed
 sed -i.bak '
@@ -202,14 +202,14 @@ import { TextToSpeech } from "../speech/text-to-speech";
       {message.role === "assistant" && (\
         <TextToSpeech text={message.content} />\
       )}
-' app/chat/components/chat/message-item.tsx
+' app/protected/chat/components/chat/message-item.tsx
 
 # Update chat-input.tsx
 log_info "Updating chat-input component..."
 # Create a backup first
-cp app/chat/components/chat/chat-input.tsx app/chat/components/chat/chat-input.tsx.bak
+cp app/protected/chat/components/chat/chat-input.tsx app/protected/chat/components/chat/chat-input.tsx.bak
 
-cat > app/chat/components/chat/chat-input.tsx << 'EOL'
+cat > app/protected/chat/components/chat/chat-input.tsx << 'EOL'
 'use client';
 
 import { useFormStatus } from 'react-dom';
@@ -266,7 +266,7 @@ npm install --save lucide-react
 
 # Cleanup backup files
 log_info "Cleaning up backup files..."
-rm -f app/chat/components/chat/*.bak
+rm -f app/protected/chat/components/chat/*.bak
 
 log_info "Installation complete! New features have been added:"
 echo "✓ Speech-to-text component"
@@ -280,5 +280,3 @@ echo "1. Run 'npm install' if you haven't already"
 echo "2. Restart your development server"
 echo "3. Test the new speech features in your browser"
 echo "4. Check browser console for any potential errors"
-
-exit 0

@@ -37,3 +37,4 @@ export function TextToSpeech({ text, language }: TextToSpeechProps) {
     </div>
   );
 }
+

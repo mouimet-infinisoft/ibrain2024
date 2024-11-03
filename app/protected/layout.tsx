@@ -69,6 +69,7 @@ import {
 } from "@/components/ui/sidebar";
 import React from "react";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent";
+import { signOutAction } from "@/app/actions";
 const data = {
   user: {
     name: "shadcn",
@@ -406,7 +407,9 @@ export default function ProtectedLayout({
                     </DropdownMenuItem>
                   </DropdownMenuGroup>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem>
+                  <DropdownMenuItem onClick={async () => {
+                    await signOutAction()
+                  }}>
                     <LogOut />
                     Log out
                   </DropdownMenuItem>
