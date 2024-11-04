@@ -1,0 +1,30 @@
+{"error":{},"level":"error","message":"Async task failed: 1","timestamp":"2024-11-03T23:18:06.494Z"}
+{"error":{},"level":"error","message":"Async task failed: 2","timestamp":"2024-11-04T02:27:36.103Z"}
+{"error":{},"level":"error","message":"Async task failed: 3","timestamp":"2024-11-04T02:36:02.235Z"}
+{"error":{},"level":"error","message":"Async task failed: 4","timestamp":"2024-11-04T02:38:39.713Z"}
+{"error":{},"level":"error","message":"Task failed: 1","timestamp":"2024-11-04T03:22:21.191Z"}
+{"level":"error","message":"Failed to create task: Failed to insert task in Supabase: Could not find the 'userId' column of 'tasks' in the schema cache","timestamp":"2024-11-04T03:22:21.203Z"}
+{"level":"error","message":"Failed job 1  on queue task-queue","timestamp":"2024-11-04T03:22:21.200Z"}
+{"level":"error","message":"Failed to create task: Failed to insert task in Supabase: Could not find the 'userId' column of 'tasks' in the schema cache","timestamp":"2024-11-04T03:25:47.021Z"}
+{"error":{},"level":"error","message":"Task failed: 2","timestamp":"2024-11-04T03:25:47.042Z"}
+{"level":"error","message":"Failed to create task: Failed to insert task in Supabase: Could not find the 'userId' column of 'tasks' in the schema cache","timestamp":"2024-11-04T03:27:18.674Z"}
+{"error":{},"level":"error","message":"Task failed: 6","timestamp":"2024-11-04T03:35:39.852Z"}
+{"level":"error","message":"Failed job 6 sendMessage on queue task-queue","timestamp":"2024-11-04T03:35:39.860Z"}
+{"error":{},"level":"error","message":"Task failed: 7","timestamp":"2024-11-04T03:38:45.448Z"}
+{"level":"error","message":"Failed job 7 sendMessage on queue task-queue","timestamp":"2024-11-04T03:38:45.452Z"}
+{"error":{},"level":"error","message":"Task failed: 9","timestamp":"2024-11-04T05:34:56.461Z"}
+{"level":"error","message":"Failed job 9 sendMessage on queue task-queue","timestamp":"2024-11-04T05:34:56.473Z"}
+{"error":{},"level":"error","message":"Task failed: 12","timestamp":"2024-11-04T05:37:17.355Z"}
+{"level":"error","message":"Failed job 12 sendMessage on queue task-queue","timestamp":"2024-11-04T05:37:17.359Z"}
+{"error":{},"level":"error","message":"Task failed: 13","timestamp":"2024-11-04T05:37:17.542Z"}
+{"level":"error","message":"Failed job 13 sendMessage on queue task-queue","timestamp":"2024-11-04T05:37:17.546Z"}
+{"error":{},"level":"error","message":"Task failed: 15","timestamp":"2024-11-04T06:04:31.344Z"}
+{"level":"error","message":"Failed job 15 sendMessage on queue task-queue","timestamp":"2024-11-04T06:04:31.346Z"}
+{"error":{},"level":"error","message":"Task failed: 16","timestamp":"2024-11-04T06:04:48.834Z"}
+{"level":"error","message":"Failed job 16 sendMessage on queue task-queue","timestamp":"2024-11-04T06:04:48.837Z"}
+{"error":{},"level":"error","message":"Task failed: 17","timestamp":"2024-11-04T06:04:49.977Z"}
+{"level":"error","message":"Failed job 17 sendMessage on queue task-queue","timestamp":"2024-11-04T06:04:49.979Z"}
+{"error":{},"level":"error","message":"Task failed: 24","timestamp":"2024-11-04T06:21:33.040Z"}
+{"level":"error","message":"Failed job 24 sendMessage on queue task-queue","timestamp":"2024-11-04T06:21:33.045Z"}
+{"error":{},"level":"error","message":"Task failed: 29","timestamp":"2024-11-04T06:21:33.639Z"}
+{"level":"error","message":"Failed job 29 sendMessage on queue task-queue","timestamp":"2024-11-04T06:21:33.641Z"}

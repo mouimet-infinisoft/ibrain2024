@@ -22,6 +22,8 @@ import {
   Sparkles,
   SquareTerminal,
   Trash2,
+  ActivityIcon,
+  InspectIcon
 } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -95,6 +97,29 @@ const data = {
         //   title: "Settings",
         //   url: "#",
         // },
+      ],
+    },
+    {
+      title: "Task Manager",
+      url: "/protected/task-manager",
+      icon:   ActivityIcon,
+      items: [
+        {
+          title: "Dashboard",
+          url: "/protected/task-manager/dashboard",
+        },
+        {
+          title: "Redis Insights",
+          url: "http://localhost:5540/",
+        },
+        {
+          title: "Prometheus",
+          url: "http://127.0.0.1:9090/",
+        },
+        {
+          title: "Grifana",
+          url: "http://localhost:3001/",
+        },
       ],
     },
     {
@@ -250,7 +275,7 @@ export default function ProtectedLayout({
                             {item.items?.map((subItem) => (
                               <SidebarMenuSubItem key={subItem.title}>
                                 <SidebarMenuSubButton asChild>
-                                  <a href={subItem.url}>
+                                  <a href={subItem.url} target={subItem.url.includes("http") ? "_blank" : "_self"}> 
                                     <span>{subItem.title}</span>
                                   </a>
                                 </SidebarMenuSubButton>

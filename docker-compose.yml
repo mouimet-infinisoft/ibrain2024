@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      task-manager-network:
+        ipv4_address: 192.168.10.2
+
+  redis-insight:
+    image: redislabs/redisinsight:latest
+    ports:
+      - "5540:5540" 
+    volumes:
+      - redis-insight-data:/db
+    networks:
+      task-manager-network:
+        ipv4_address: 192.168.10.3
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    networks:
+      task-manager-network:
+        ipv4_address: 192.168.10.4
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/dashboards:/var/lib/grafana/dashboards
+      - grafana_data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    depends_on:
+      - prometheus
+    networks:
+      task-manager-network:
+        ipv4_address: 192.168.10.5
+
+networks:
+  task-manager-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.10.0/24
+
+volumes:
+  redis_data:
+  redis-insight-data:
+  prometheus_data:
+  grafana_data:

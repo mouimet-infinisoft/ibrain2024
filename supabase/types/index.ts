@@ -55,38 +55,6 @@ export type Database = {
         }
         Relationships: []
       }
-      message_chunks: {
-        Row: {
-          content: string
-          conversation_id: string
-          created_at: string
-          id: string
-          role: string
-        }
-        Insert: {
-          content: string
-          conversation_id: string
-          created_at?: string
-          id?: string
-          role: string
-        }
-        Update: {
-          content?: string
-          conversation_id?: string
-          created_at?: string
-          id?: string
-          role?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "message_chunks_conversation_id_fkey"
-            columns: ["conversation_id"]
-            isOneToOne: false
-            referencedRelation: "conversations"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
       messages: {
         Row: {
           content: string
@@ -119,6 +87,42 @@ export type Database = {
           },
         ]
       }
+      tasks: {
+        Row: {
+          created_at: string | null
+          error: string | null
+          id: number
+          payload: Json
+          result: Json | null
+          status: Database["public"]["Enums"]["task_status"]
+          type: string
+          updated_at: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string | null
+          error?: string | null
+          id?: number
+          payload: Json
+          result?: Json | null
+          status: Database["public"]["Enums"]["task_status"]
+          type: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string | null
+          error?: string | null
+          id?: number
+          payload?: Json
+          result?: Json | null
+          status?: Database["public"]["Enums"]["task_status"]
+          type?: string
+          updated_at?: string | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
@@ -127,7 +131,14 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      task_status:
+        | "completed"
+        | "failed"
+        | "delayed"
+        | "active"
+        | "waiting"
+        | "waiting-children"
+        | "unknown"
     }
     CompositeTypes: {
       [_ in never]: never
