@@ -41,6 +41,8 @@
     "react-markdown": "^9.0.1",
     "redis": "^4.7.0",
     "remark-gfm": "^4.0.0",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.0.2",
     "winston": "^3.16.0"
   },
   "devDependencies": {
@@ -48,6 +50,7 @@
     "@types/node": "20.10.6",
     "@types/react": "18.2.46",
     "@types/react-dom": "18.2.18",
+    "@types/uuid": "^10.0.0",
     "dotenv": "^16.4.5",
     "postcss": "8.4.33",
     "tailwind-merge": "^2.5.4",

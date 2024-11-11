@@ -1,0 +1,253 @@
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-06T21:43:37.314Z"}
+{"jobId":"56","level":"verbose","message":"queueEvents event on completed with args: ","returnvalue":"d2033372-b07d-4225-88d5-bc5c1907bed0","timestamp":"2024-11-06T21:44:52.079Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T21:44:52.112Z"}
+{"jobId":"57","level":"verbose","message":"queueEvents event on completed with args: ","returnvalue":"b5a9e4fb-3db9-44d5-891a-2d7148ba2745","timestamp":"2024-11-06T21:49:55.769Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T21:49:55.787Z"}
+{"jobId":"58","level":"verbose","message":"queueEvents event on completed with args: ","returnvalue":"eb92c0cb-7409-4246-a40d-280a00cf9dfc","timestamp":"2024-11-06T21:50:10.214Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T21:50:10.222Z"}
+{"jobId":"59","level":"verbose","message":"queueEvents event on completed with args: ","returnvalue":"c85ac29f-930b-499c-b143-4d35c9347d8e","timestamp":"2024-11-06T21:50:58.282Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T21:50:58.294Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-06T21:54:20.882Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-06T21:55:00.456Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-06T21:56:32.274Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-06T22:00:22.265Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-06T22:00:36.303Z"}
+{"level":"verbose","message":"queueEvents event on waiting with jobId: ","timestamp":"2024-11-06T22:00:40.400Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:00:40.447Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-06T22:01:27.421Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:01:34.785Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:11:20.862Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-06T22:12:45.236Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:12:57.353Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:12:57.377Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:12:57.379Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-06T22:13:31.985Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:13:34.259Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:13:34.295Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:13:34.319Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:02.711Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:02.731Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:02.738Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:15.904Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:15.907Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:15.921Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:23.602Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:23.614Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:23.616Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:23.726Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:23.738Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:23.743Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:23.819Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:23.833Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:23.839Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:23.961Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:23.970Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:23.974Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:36.392Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.399Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.408Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.540Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:36.548Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.578Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.658Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:36.660Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.677Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.793Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:36.797Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.830Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:36.902Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.906Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:36.912Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:37.014Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:37.019Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:37.028Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-06T22:14:37.094Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:37.103Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-06T22:14:37.106Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T01:52:36.632Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T02:13:52.364Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:15:04.077Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:15:04.103Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:15:04.106Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T02:17:25.282Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:17:40.118Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:17:40.149Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:17:40.157Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:19:47.159Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:19:47.168Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:19:47.180Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:20:20.817Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:20:20.824Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:20:20.828Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:27:58.565Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:27:58.573Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:27:58.582Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:29:07.014Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:29:07.016Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:29:07.028Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T02:31:02.158Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:31:25.714Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:31:25.747Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:31:25.754Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T02:32:51.400Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T02:34:10.246Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:34:18.346Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:34:18.381Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:34:18.387Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:36:10.426Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:36:10.436Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:36:10.451Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:51:22.554Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:51:22.559Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:51:22.575Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:52:44.046Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:52:44.061Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:52:44.090Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:53:49.976Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:53:50.009Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:53:50.023Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:54:16.665Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:54:16.684Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:54:16.703Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:54:16.709Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:54:20.587Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:54:20.671Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:54:52.630Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:54:52.648Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:54:52.655Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T02:56:02.840Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:56:02.864Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T02:56:02.880Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T03:03:25.403Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:03:25.426Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:03:25.430Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T03:04:52.767Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:04:52.814Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:04:52.816Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T03:07:14.905Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:07:14.930Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:07:14.954Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T03:07:54.230Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:07:54.288Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:07:54.294Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T03:08:24.766Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:08:24.793Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:08:24.809Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T03:13:46.595Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:13:46.626Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T03:13:46.634Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:00:38.333Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:00:38.364Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:00:38.411Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:02:36.001Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:02:36.024Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:02:36.034Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:05:47.069Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:05:47.087Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:05:47.089Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:06:07.963Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:06:07.972Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:06:08.015Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:22:39.416Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:22:39.431Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:22:39.450Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:25:40.738Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:25:40.758Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:25:40.779Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:29:35.518Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:29:35.540Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:29:35.559Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:32:46.213Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:32:46.236Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:32:46.252Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:36:59.251Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:36:59.267Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:36:59.269Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:37:29.992Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:37:30.007Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:37:30.013Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:38:39.687Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:38:39.707Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:38:39.733Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:40:22.103Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:40:22.120Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:40:22.121Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:42:19.338Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:42:19.341Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:42:19.357Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T04:48:45.403Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:49:18.379Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:49:18.412Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:49:18.414Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T04:50:54.891Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:51:51.497Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:51:51.523Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:51:51.526Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T04:57:24.856Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:57:55.993Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:57:56.018Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:57:56.031Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T04:58:18.673Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:58:18.687Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T04:58:18.697Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-07T05:09:15.618Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T05:10:02.577Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:10:02.627Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:10:02.631Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T05:30:41.544Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:30:41.550Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:30:41.564Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:32:53.471Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T05:32:53.478Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:32:53.490Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:33:17.237Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T05:33:17.244Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:33:17.259Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:33:45.614Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T05:33:45.631Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:33:45.645Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:34:22.797Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T05:34:22.806Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:34:22.843Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:35:14.775Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T05:35:14.778Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:35:14.789Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:36:17.825Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T05:36:17.826Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:36:17.839Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:40:02.921Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T05:40:02.937Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T05:40:02.951Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:00:43.890Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T06:00:43.894Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:00:43.903Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T06:04:52.762Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:04:52.765Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:04:52.788Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T06:06:15.332Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:06:15.351Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:06:15.368Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T06:07:40.596Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:07:40.611Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:07:40.617Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T06:07:50.116Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:07:50.125Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:07:50.130Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:27:06.318Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T06:27:06.348Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:27:06.365Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:29:47.486Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T06:29:47.496Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:29:47.505Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:30:15.990Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-07T06:30:15.998Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-07T06:30:16.005Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-11T22:38:24.025Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-11T22:38:24.027Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-11T22:38:24.037Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-11T22:39:13.870Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-11T22:39:13.879Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-11T22:39:13.891Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-11T22:40:13.436Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-11T22:40:13.437Z"}
+{"level":"verbose","message":"updateState successful! Result: ","timestamp":"2024-11-11T22:40:13.455Z"}

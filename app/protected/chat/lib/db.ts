@@ -1,5 +1,5 @@
 import { createClient } from "@/utils/supabase/server";
-import { Conversation, Message, MessageChunk } from "./types";
+import { Conversation, Message} from "./types";
 
 export async function getMessages(conversationId: string) {
   const supabase = await createClient();

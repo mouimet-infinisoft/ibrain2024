@@ -27,6 +27,80 @@ This document outlines the requirements, choices, and plan of action for buildin
 
 ```mermaid
 graph TD
+    subgraph "Client Layer"
+        UI[React UI]
+        ServerAction[Server Actions]
+        WebSocket[WebSocket Client]
+    end
+
+    subgraph "API Layer"
+        API[Next.js API Routes]
+        WSServer[WebSocket Server]
+        StreamHandler[Stream Handler]
+    end
+
+    subgraph "Task Management"
+        TaskManager[Task Manager]
+        TaskQueue[Bull Queue]
+        BullDashboard[Bull Dashboard]
+    end
+
+    subgraph "Storage Layer"
+        Redis[(Redis)]
+        RedisInsight[Redis Insight]
+    end
+
+    subgraph "Monitoring"
+        Prometheus[Prometheus]
+        Grafana[Grafana]
+    end
+
+    subgraph "Task Types"
+        StandardTask[Standard Tasks]
+        StreamingTask[Streaming Tasks]
+        LLMTask[LLM Priority Tasks]
+    end
+
+    %% Client Layer Connections
+    UI -->|Create Task| API
+    UI -->|Create Task| ServerAction
+    UI -->|Connect| WebSocket
+    WebSocket -->|Stream Data| WSServer
+
+    %% API Layer Connections
+    API -->|Queue Task| TaskManager
+    ServerAction -->|Queue Task| TaskManager
+    WSServer -->|Handle Stream| StreamHandler
+    StreamHandler -->|Queue Priority| TaskQueue
+
+    %% Task Management Connections
+    TaskManager -->|Enqueue| TaskQueue
+    TaskQueue -->|Store| Redis
+    BullDashboard -->|Monitor| TaskQueue
+
+    %% Storage Layer
+    Redis -.->|Monitor| RedisInsight
+
+    %% Monitoring Connections
+    TaskQueue -->|Metrics| Prometheus
+    Prometheus -->|Visualize| Grafana
+
+    %% Task Type Handling
+    TaskQueue -->|Process| StandardTask
+    TaskQueue -->|Stream| StreamingTask
+    TaskQueue -->|Priority| LLMTask
+
+    %% Streaming Path
+    StreamingTask -->|Real-time Data| WSServer
+    LLMTask -->|Real-time Response| WSServer
+
+    style StreamingTask fill:#f9f,stroke:#333
+    style LLMTask fill:#f9f,stroke:#333
+    style WSServer fill:#bbf,stroke:#333
+```
+
+```mermaid
+graph TD
     subgraph User_Interface
         UI[React 19]
     end

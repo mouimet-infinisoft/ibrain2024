@@ -18,6 +18,10 @@ create table messages (
   created_at timestamp with time zone default timezone('utc'::text, now()) not null
 );
 
+-- Realtime enable
+ALTER PUBLICATION supabase_realtime ADD TABLE conversations;
+ALTER PUBLICATION supabase_realtime ADD TABLE messages;
+
 -- Enable RLS
 -- alter table conversations enable row level security;
 -- alter table messages enable row level security;

@@ -89,35 +89,41 @@ export type Database = {
       }
       tasks: {
         Row: {
+          action: string
           created_at: string | null
           error: string | null
-          id: number
+          id: string
+          job_id: string
           payload: Json
           result: Json | null
           status: Database["public"]["Enums"]["task_status"]
-          type: string
+          type: Database["public"]["Enums"]["task_type"]
           updated_at: string | null
           user_id: string | null
         }
         Insert: {
+          action: string
           created_at?: string | null
           error?: string | null
-          id?: number
+          id?: string
+          job_id: string
           payload: Json
           result?: Json | null
           status: Database["public"]["Enums"]["task_status"]
-          type: string
+          type: Database["public"]["Enums"]["task_type"]
           updated_at?: string | null
           user_id?: string | null
         }
         Update: {
+          action?: string
           created_at?: string | null
           error?: string | null
-          id?: number
+          id?: string
+          job_id?: string
           payload?: Json
           result?: Json | null
           status?: Database["public"]["Enums"]["task_status"]
-          type?: string
+          type?: Database["public"]["Enums"]["task_type"]
           updated_at?: string | null
           user_id?: string | null
         }
@@ -139,6 +145,7 @@ export type Database = {
         | "waiting"
         | "waiting-children"
         | "unknown"
+      task_type: "REGULAR" | "REALTIME"
     }
     CompositeTypes: {
       [_ in never]: never

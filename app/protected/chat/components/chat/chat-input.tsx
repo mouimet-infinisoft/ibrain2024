@@ -4,14 +4,19 @@ import { useFormStatus } from "react-dom";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { SendHorizontal } from "lucide-react";
-import { sendMessage } from "../../actions/chat-actions";
 import { useEffect, useRef } from "react";
 import { SpeechToText } from "@/components/ui/speech-to-text";
 import { useSpeechToText } from "@/lib/hooks/use-speech-to-text";
+import { TSendMessage } from "../../[conversationId]/page";
 
-export function ChatInput({ conversationId }: { conversationId: string }) {
+export function ChatInput({
+  conversationId,
+  sendMessage,
+}: {
+  conversationId: string;
+  sendMessage: TSendMessage;
+}) {
   const { pending } = useFormStatus();
-  const sendMessageWithConversationId = sendMessage.bind(null, conversationId);
   const { transcript, stopListening } = useSpeechToText();
 
   // Create a ref for the input
@@ -26,7 +31,17 @@ export function ChatInput({ conversationId }: { conversationId: string }) {
 
   return (
     <form
-      action={sendMessageWithConversationId}
+      // action={sendMessageWithConversationId}
+      onSubmit={async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.currentTarget);
+        const message = formData.get("message") as string;
+        const task = await sendMessage(conversationId, message);
+        if (inputRef.current) {
+          inputRef.current.value = ""
+        }
+        // enqueueTask(task as any)
+      }}
       className="flex items-center gap-2 p-4"
     >
       <Input

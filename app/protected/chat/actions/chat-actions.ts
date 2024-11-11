@@ -4,7 +4,7 @@ import { createClient } from "@/utils/supabase/server";
 import { Message } from "../lib/types";
 import { redirect } from "next/navigation";
 
-export async function getMessages(conversationId: string): Promise<Message[]> {
+async function getMessages(conversationId: string): Promise<Message[]> {
   const supabase = await createClient();
   
   const { data, error } = await supabase

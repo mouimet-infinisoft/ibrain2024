@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { createTask } from "./actions/createTask";
 import { TaskList } from "./components/TaskList";
 
 export default async function Page() {
@@ -10,8 +9,7 @@ export default async function Page() {
         variant={"outline"}
         onClick={async () => {
           "use server";
-          const j = await createTask({ type: "sendMessage", payload: "doguette" });
-          console.log("create task ", j);
+          console.log("create task ");
         }}
       >
         Add Task

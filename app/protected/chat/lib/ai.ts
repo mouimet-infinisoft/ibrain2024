@@ -2,7 +2,7 @@
 import ollama from "ollama";
 import { insertAssistantMessage } from "../actions/chat-actions";
 
-export async function streamLLMResponse(message: string, conversationId: string) {
+async function streamLLMResponse(message: string, conversationId: string) {
   const encoder = new TextEncoder();
   const stream = new ReadableStream({
     async start(controller) {
