@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { ChatInput } from "../components/chat/chat-input";
 import { ChatStream } from "../components/chat/chat-stream";
 import { MessageList } from "../components/chat/message-list";
-import { getMessages } from "../lib/db";
+import { getMessages } from "../actions/chat-actions";
 import { Message } from "../lib/types";
 import { createTaskSendMessageAI } from "@/lib/features/task-manager/task";
 

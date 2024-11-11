@@ -2,10 +2,6 @@ import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
 import { Providers } from "./providers";
 import "./globals.css";
-import { setupPersistentTask } from "@/lib/features/task-manager/persistent";
-import { createClient } from "@/utils/supabase/server";
-import { queue } from "@/lib/features/task-manager/queue";
-import logger from "@/lib/monitoring/logger";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`

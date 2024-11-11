@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { getConversations } from './lib/db';
+import { getConversations } from "./actions/chat-actions";
 import { Button } from '@/components/ui/button';
 import { createConversation } from './actions/chat-actions';
 import { MessageSquarePlus } from 'lucide-react';

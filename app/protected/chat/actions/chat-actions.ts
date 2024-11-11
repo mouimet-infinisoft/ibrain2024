@@ -1,21 +1,8 @@
 "use server";
 import { revalidatePath } from "next/cache";
 import { createClient } from "@/utils/supabase/server";
-import { Message } from "../lib/types";
 import { redirect } from "next/navigation";
-
-async function getMessages(conversationId: string): Promise<Message[]> {
-  const supabase = await createClient();
-  
-  const { data, error } = await supabase
-    .from("messages")
-    .select("*")
-    .eq("conversation_id", conversationId)
-    .order("created_at", { ascending: true });
-
-  if (error) throw error;
-  return data as Message[];
-}
+import { Conversation, Message } from "../lib/types";
 
 export async function sendMessage(conversationId: string, formData: FormData) {
   const message = formData.get("message");
@@ -69,3 +56,27 @@ export async function createConversation() {
   revalidatePath("/protected/chat");
   return data;
 }
+
+export async function getConversations() {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("conversations")
+    .select("*")
+    .order("last_message_at", { ascending: false });
+
+  return data as Conversation[];
+}
+
+export async function getMessages(conversationId: string) {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("messages")
+    .select("*")
+    .eq("conversation_id", conversationId)
+    .order("created_at", { ascending: true });
+
+  console.log(`DATA GET_MESSAGES `, data);
+
+  return data as Message[];
+}
+

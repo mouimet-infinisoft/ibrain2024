@@ -1,6 +1,7 @@
 import { QueueEvents, Worker } from "bullmq";
 import { createNewTask, updateTaskState } from "./storage";
 import { connection } from "./connection";
+import { worker } from "./worker";
 
 import logger from "./monitoring/logger";
 import { createClient } from "@supabase/supabase-js";
@@ -24,23 +25,23 @@ export const setupPersistentTask = async (queueName: string) => {
         returnValue,
       );
       // @ts-ignore
-      const result = await updateState(args.jobId, {
+      const updatedTask = await updateState(args.jobId, {
         status: "completed",
         result: args.returnvalue,
         updated_at: new Date().toISOString(),
       });
 
       // @ts-ignore
-      if( result?.payload?.conversation_id){
-      await supabase.from("messages").insert({
-        // @ts-ignore
-        conversation_id: result.payload.conversation_id,
-        role: "assistant",
-        content: args.returnvalue,
-      });
-    }
+      if (updatedTask?.payload?.conversationId) {
+        await supabase.from("messages").insert({
+          // @ts-ignore
+          conversation_id: updatedTask.payload.conversationId,
+          role: "assistant",
+          content: args.returnvalue,
+        });
+      }
 
-      console.log(`updateState successful! Result: `, result);
+      console.log(`updateState successful! Result: `, updatedTask);
     } catch (e) {
       console.log(`Failed to updateState with folowing error:: `, e);
     }
@@ -77,5 +78,6 @@ export const setupPersistentTask = async (queueName: string) => {
     });
     logger.verbose(`updateState successful! Result: `, result);
   });
-  
+
+  await worker.run();
 };

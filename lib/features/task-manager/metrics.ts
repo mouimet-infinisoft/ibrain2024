@@ -1,6 +1,8 @@
 import { collectDefaultMetrics, Counter, register } from "prom-client";
-import logger from "../../monitoring/logger";
-import { worker } from "./worker";
+// import logger from "../../monitoring/logger";
+// import { worker } from "./worker";
+// import { QueueEvents } from "bullmq";
+// import { connection } from "./connection";
 
 collectDefaultMetrics({ register });
 
@@ -16,19 +18,21 @@ const failedJobs = new Counter({
   labelNames: ["queue"],
 });
 
-register.registerMetric(completedJobs);
-register.registerMetric(failedJobs);
+// const q = new QueueEvents('tasks', {connection})
 
-worker.on("completed", (job, result) => {
-  logger.info(
-    `Completed job ${job?.id} ${job?.name} on queue ${worker.name} with result ${result}`,
-  );
-  completedJobs.labels({ queue: job?.queueName }).inc();
-});
+// register.registerMetric(completedJobs);
+// register.registerMetric(failedJobs);
 
-worker.on("failed", (job) => {
-  logger.error(`Failed job ${job?.id} ${job?.name} on queue ${worker.name}`);
-  failedJobs.labels({ queue: job?.queueName }).inc();
-});
+// worker.on("completed", (job, result) => {
+//   logger.info(
+//     `Completed job ${job?.id} ${job?.name} on queue ${worker.name} with result ${result}`,
+//   );
+//   completedJobs.labels({ queue: job?.queueName }).inc();
+// });
+
+// worker.on("failed", (job) => {
+//   logger.error(`Failed job ${job?.id} ${job?.name} on queue ${worker.name}`);
+//   failedJobs.labels({ queue: job?.queueName }).inc();
+// });
 
 export const metrics = () => register.metrics();
