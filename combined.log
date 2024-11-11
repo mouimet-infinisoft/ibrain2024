@@ -16665,3 +16665,4 @@
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-11T23:50:09.721Z"}
 {"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"88974a8b-9618-4b59-943e-fb99a526a5ca\",\"job_id\":\"a7540ad1-b2b4-4fbf-8565-aebcb22d744a\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"9215fd82-59a0-4887-b334-8fcf2355b439\",\"message\":\"hello\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-11T23:50:36.701Z\",\"updated_at\":\"2024-11-11T23:50:36.701Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-11T23:50:36.728Z"}
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-11T23:50:38.041Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-11T23:51:09.354Z"}
