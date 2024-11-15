@@ -19,16 +19,16 @@ const failedJobs = new Counter({
 register.registerMetric(completedJobs);
 register.registerMetric(failedJobs);
 
-worker.on("completed", (job, result) => {
-  logger.info(
-    `Completed job ${job?.id} ${job?.name} on queue ${worker.name} with result ${result}`,
-  );
-  completedJobs.labels({ queue: job?.queueName }).inc();
-});
+// worker().on("completed", (job, result) => {
+//   logger.info(
+//     `Completed job ${job?.id} ${job?.name} on queue ${worker.name} with result ${result}`,
+//   );
+//   completedJobs.labels({ queue: job?.queueName }).inc();
+// });
 
-worker.on("failed", (job) => {
-  logger.error(`Failed job ${job?.id} ${job?.name} on queue ${worker.name}`);
-  failedJobs.labels({ queue: job?.queueName }).inc();
-});
+// worker.on("failed", (job) => {
+//   logger.error(`Failed job ${job?.id} ${job?.name} on queue ${worker.name}`);
+//   failedJobs.labels({ queue: job?.queueName }).inc();
+// });
 
 export const metrics = () => register.metrics();

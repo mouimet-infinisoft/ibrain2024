@@ -3,7 +3,10 @@ import ollama from "ollama";
 
 interface Message {
     action: string;
-    payload: any;
+    payload: string;
+    status?: 'streaming' | 'complete';
+    isStreaming?: boolean;
+    isComplete?: boolean;
 }
 
 export class SocketServer {
@@ -52,13 +55,13 @@ export class SocketServer {
         switch (message.action) {
             case 'talk':
                 // Handle broadcasting messages to other clients
-                this.broadcast(message.payload, sender);
+                this.broadcast(message, sender);
                 break;
 
-            case 'generate':
-                // Handle LLM generation
-                await this.streamLLMResponse(message.payload.message, sender);
-                break;
+            // case 'generate':
+            //     // Handle LLM generation
+            //     await this.streamLLMResponse(message.payload.message, sender);
+            //     break;
 
             default:
                 console.warn(`Unknown action: ${message.action}`);
@@ -66,13 +69,10 @@ export class SocketServer {
         }
     }
 
-    private broadcast(payload: any, sender: WebSocket): void {
+    private broadcast(message:Message, sender: WebSocket): void {
         this.clients.forEach(client => {
             if (client !== sender && client.readyState === WebSocket.OPEN) {
-                client.send(JSON.stringify({
-                    action: 'talk',
-                    payload: payload
-                }));
+                client.send(JSON.stringify(message));
             }
         });
     }

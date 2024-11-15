@@ -1,7 +1,7 @@
 import { setupPersistentTask } from "./persistent";
 import { SocketServer } from "./ws/server";
 
-setupPersistentTask("tasks").catch((err) => {
+setupPersistentTask("realtime-tasks").catch((err) => {
     console.error(err);
 });
 

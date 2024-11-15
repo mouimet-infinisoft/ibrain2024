@@ -5,6 +5,8 @@ import { Markdown } from "@/components/markdown";
 import { useEffect, useState, useCallback } from "react";
 import { BotIcon, Brain } from "lucide-react";
 import { TextToSpeech } from "@/components/ui/text-to-speech";
+import { useRouter } from "next/navigation";
+import { useSpeech } from "@/lib/hooks/use-speech";
 
 interface ChatStreamProps {
   conversationId: string;
@@ -13,13 +15,11 @@ interface ChatStreamProps {
 interface Message {
   action: string;
   payload: string;
-  //  {
-  //   message: string;
-  //   isStreaming?: boolean;
-  //   isComplete?: boolean;
-  //   error?: boolean;
-  // };
+  status?: "streaming" | "complete";
+  isStreaming?: boolean;
+  isComplete?: boolean;
   id?: string;
+  chunk?: string;
 }
 
 const BrainLoader = () => {
@@ -85,40 +85,14 @@ export function ChatStream({ conversationId }: ChatStreamProps) {
   const [content, setContent] = useState("");
   const [isStreaming, setIsStreaming] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
-  const [socket, setSocket] = useState<WebSocket | null>(null);
-
-  // const handleWebSocketMessage = useCallback((event: MessageEvent) => {
-  //   try {
-  //     console.log("Received message:", event.data);
-  //     const message: Message = JSON.parse(event.data);
-
-  //     if (message.action === "talk") {
-  //       const { message: messageContent, isStreaming: streaming, isComplete, error } = message.payload;
-
-  //       if (error) {
-  //         console.error("Error from server:", messageContent);
-  //         setIsStreaming(false);
-  //         return;
-  //       }
-
-  //       setContent(messageContent);
-  //       setIsStreaming(streaming ?? false);
-
-  //       if (isComplete) {
-  //         setIsStreaming(false);
-  //       }
-  //     }
-  //   } catch (error) {
-  //     console.error("Error parsing WebSocket message:", error);
-  //   }
-  // }, []);
+  const { speak } = useSpeech();
+  const router = useRouter();
 
   useEffect(() => {
     const ws = new WebSocket("ws://localhost:7777");
 
     ws.onopen = () => {
       console.log("WebSocket connected");
-      setSocket(ws);
     };
 
     // ws.onmessage = handleWebSocketMessage;
@@ -126,20 +100,23 @@ export function ChatStream({ conversationId }: ChatStreamProps) {
       try {
         console.log("Received message:", event.data);
         const message: Message = JSON.parse(event.data);
-        console.log(message.action);
+
         if (message.action === "talk") {
-          // if (error) {
-          //   console.error("Error from server:", messageContent);
-          //   setIsStreaming(false);
-          //   return;
-          // }
+          // Empty payload with isStreaming true indicates start of streaming
 
           setContent(message.payload);
-          // setIsStreaming(streaming ?? false);
+          setIsStreaming(message.isStreaming || message.status === "streaming");
+          if (message.chunk) {
+            speak(message.chunk);
+          }
 
-          // if (isComplete) {
-          //   setIsStreaming(false);
-          // }
+          // Handle completion
+          if (message.isComplete) {
+            console.log("Message complete :", message);
+            setIsStreaming(false);
+            setContent("");
+            router.refresh();
+          }
         }
       } catch (error) {
         console.error("Error parsing WebSocket message:", error);
@@ -153,27 +130,13 @@ export function ChatStream({ conversationId }: ChatStreamProps) {
 
     ws.onclose = () => {
       console.log("WebSocket disconnected");
-      // setSocket(null);
-      // setIsStreaming(false);
+      setIsStreaming(false);
     };
 
     return () => {
       ws.close();
     };
   }, []);
-
-  // const sendMessage = useCallback((message: string) => {
-  //   if (socket?.readyState === WebSocket.OPEN) {
-  //     setIsStreaming(true);
-  //     socket.send(JSON.stringify({
-  //       action: "generate",
-  //       id: conversationId,
-  //       payload: {
-  //         message
-  //       }
-  //     }));
-  //   }
-  // }, [socket, conversationId]);
 
   return (
     <div className="relative w-full">
@@ -242,8 +205,8 @@ export function ChatStream({ conversationId }: ChatStreamProps) {
             {content && (
               <>
                 <div
-                  className={`size-[36px] flex flex-col justify-center items-center flex-shrink-0 text-zinc-400 ${
-                    !isStreaming ? "animate-pulse" : ""
+                  className={`size-[36px] flex flex-col justify-center items-center flex-shrink-0 text-zinc-400 self-end ${
+                    isStreaming ? "animate-pulse" : ""
                   }`}
                 >
                   <BotIcon size={36} />
@@ -251,7 +214,7 @@ export function ChatStream({ conversationId }: ChatStreamProps) {
                 <div className="flex flex-col gap-1 items-start w-full">
                   <div className="p-4 rounded-lg max-w-[80%] bg-muted">
                     <Markdown>{content}</Markdown>
-                    {!isStreaming && (
+                    {isStreaming && (
                       <span className="inline-block animate-pulse ml-1 vertical-align-text-top">
                         ▋
                       </span>
