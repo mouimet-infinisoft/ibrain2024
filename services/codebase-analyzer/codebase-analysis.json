@@ -1,0 +1,14 @@
+{
+  "structure": {
+    "features": {},
+    "services": [],
+    "libs": []
+  },
+  "dependencies": {},
+  "patterns": [],
+  "metrics": {
+    "totalFiles": 0,
+    "testCoverage": 0,
+    "complexityScore": 0
+  }
+}

@@ -18783,3 +18783,67 @@
 {"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"6ad85a27-b25f-48eb-9c85-6b4e0357f5f0\",\"job_id\":\"e7540fe5-c150-42bd-8ce2-c70cd0ef4031\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"3e4dc3ab-8d4b-48ec-9017-b3d8b59cb342\",\"message\":\"hi im back\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T04:20:09.974Z\",\"updated_at\":\"2024-11-15T04:20:09.974Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T04:20:09.991Z"}
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T04:20:11.223Z"}
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T04:20:56.055Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T06:43:47.996Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T06:43:49.154Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"3b2cc84e-4dd7-4930-a1cf-29b5fe109e7a\",\"job_id\":\"9b3d6a53-a7e1-4403-be7d-9acbd53586b8\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"863b09d4-4867-4319-b3ef-7a8c885a6cb2\",\"message\":\"hi\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T06:43:50.616Z\",\"updated_at\":\"2024-11-15T06:43:50.616Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T06:43:50.629Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T06:43:51.917Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T06:44:39.886Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T06:44:47.758Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:28:45.106Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:28:45.631Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"58334e02-4a33-443a-ae60-abe74c3aac03\",\"job_id\":\"ca6bb08c-ac28-4c01-91c1-cb425acb50a4\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"863b09d4-4867-4319-b3ef-7a8c885a6cb2\",\"message\":\"hi\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T12:28:59.188Z\",\"updated_at\":\"2024-11-15T12:28:59.188Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T12:28:59.202Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:29:00.587Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"5dd8512a-9c98-4c64-9e36-659123efc4d7\",\"job_id\":\"856338f8-6c19-47cd-a2ad-f331c2ebd1d6\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"863b09d4-4867-4319-b3ef-7a8c885a6cb2\",\"message\":\"hi\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T12:30:46.098Z\",\"updated_at\":\"2024-11-15T12:30:46.098Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T12:30:46.109Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:30:47.224Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"fa264907-4700-4ad3-a1df-5265c388395c\",\"job_id\":\"15a1b392-7bc7-48b5-99f3-c498e794b8b1\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"863b09d4-4867-4319-b3ef-7a8c885a6cb2\",\"message\":\"hi\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T12:34:48.954Z\",\"updated_at\":\"2024-11-15T12:34:48.954Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T12:34:48.968Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:34:49.965Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:35:50.507Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:35:51.361Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:35:52.795Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:35:55.738Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:35:57.260Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:02.375Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:07.350Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:12.271Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:17.560Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:35.879Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:36.909Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:38.228Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:39.168Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:40.170Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:40.748Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:41.647Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:46.759Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:52.571Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:36:57.225Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:01.749Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:06.732Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:07.914Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:09.076Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:14.076Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:19.308Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:24.298Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:29.275Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:34.330Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:38.993Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:44.175Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:49.140Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:37:54.118Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:38:06.293Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T12:38:06.660Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"1c16cd0f-7676-4f30-bab1-d2cff1477dbf\",\"job_id\":\"7c4754e9-0a0d-4eb0-8fd8-fc36f309c911\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"863b09d4-4867-4319-b3ef-7a8c885a6cb2\",\"message\":\"hi\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T12:38:06.700Z\",\"updated_at\":\"2024-11-15T12:38:06.700Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T12:38:06.714Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:09:09.086Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:09:09.622Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"e7fa5c2e-a4ed-4a17-818d-f0fa6f25fa51\",\"job_id\":\"aa87541f-be08-4e5c-9d29-58ff2e0eff25\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"863b09d4-4867-4319-b3ef-7a8c885a6cb2\",\"message\":\"hi\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T16:09:18.706Z\",\"updated_at\":\"2024-11-15T16:09:18.706Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T16:09:18.720Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:09:19.802Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:15:29.806Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"b316e9b2-04cb-4c92-bb82-7131fdf3ad58\",\"job_id\":\"9ef590d5-863b-4d9f-b816-577c2958abd7\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"863b09d4-4867-4319-b3ef-7a8c885a6cb2\",\"message\":\"yo\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T16:15:44.325Z\",\"updated_at\":\"2024-11-15T16:15:44.325Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T16:15:44.364Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:15:45.567Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:16:02.164Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:16:16.031Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"8568abde-740b-4666-907b-6384ec4dd0a0\",\"job_id\":\"76a55b52-6e0d-494e-8438-e44838565464\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"863b09d4-4867-4319-b3ef-7a8c885a6cb2\",\"message\":\"yo\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T16:16:31.300Z\",\"updated_at\":\"2024-11-15T16:16:31.300Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T16:16:31.318Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:16:32.824Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:16:46.675Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"91d21bd3-8af8-407c-aee7-3560384da43d\",\"job_id\":\"1578d357-28a8-40d1-92b7-d6e680f0b7fb\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"863b09d4-4867-4319-b3ef-7a8c885a6cb2\",\"message\":\"generate a typescript crud react feature\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-15T16:17:08.189Z\",\"updated_at\":\"2024-11-15T16:17:08.189Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-15T16:17:08.200Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:17:09.619Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-15T16:39:54.043Z"}
