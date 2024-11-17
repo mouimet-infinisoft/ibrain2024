@@ -94,6 +94,7 @@ export type Database = {
           error: string | null
           id: string
           job_id: string
+          parent_task_id: string | null
           payload: Json
           result: Json | null
           status: Database["public"]["Enums"]["task_status"]
@@ -107,9 +108,10 @@ export type Database = {
           error?: string | null
           id?: string
           job_id: string
+          parent_task_id?: string | null
           payload: Json
           result?: Json | null
-          status: Database["public"]["Enums"]["task_status"]
+          status?: Database["public"]["Enums"]["task_status"]
           type: Database["public"]["Enums"]["task_type"]
           updated_at?: string | null
           user_id?: string | null
@@ -120,6 +122,7 @@ export type Database = {
           error?: string | null
           id?: string
           job_id?: string
+          parent_task_id?: string | null
           payload?: Json
           result?: Json | null
           status?: Database["public"]["Enums"]["task_status"]
@@ -127,7 +130,15 @@ export type Database = {
           updated_at?: string | null
           user_id?: string | null
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "tasks_parent_task_id_fkey"
+            columns: ["parent_task_id"]
+            isOneToOne: false
+            referencedRelation: "tasks"
+            referencedColumns: ["id"]
+          },
+        ]
       }
     }
     Views: {
@@ -145,7 +156,7 @@ export type Database = {
         | "waiting"
         | "waiting-children"
         | "unknown"
-      task_type: "REGULAR" | "REALTIME"
+      task_type: "REGULAR" | "REALTIME" | "BACKGROUND"
     }
     CompositeTypes: {
       [_ in never]: never

@@ -24,9 +24,9 @@ type SendMessagePayload = {
   conversationId: string;
 };
 
-export type Task = TaskActionPayload<"SEND_MESSAGE", SendMessagePayload> & {
-  type: "REALTIME";
-};
+// export type Task = TaskActionPayload<"SEND_MESSAGE", SendMessagePayload> & {
+//   type: "REALTIME";
+// };
 
 type TaskActionPayload<T extends string, P extends Json> = BaseTask & {
   action: T;

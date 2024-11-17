@@ -2,11 +2,13 @@ import WebSocket from 'ws';
 import ollama from "ollama";
 
 interface Message {
-    action: string;
+    action: "talk" | "background_update";
     payload: string;
-    status?: 'streaming' | 'complete';
+    status?: "streaming" | "complete";
     isStreaming?: boolean;
     isComplete?: boolean;
+    taskType?: "REALTIME" | "BACKGROUND";
+    backgroundType?: "code" | "research";
 }
 
 export class SocketServer {
@@ -57,7 +59,10 @@ export class SocketServer {
                 // Handle broadcasting messages to other clients
                 this.broadcast(message, sender);
                 break;
-
+            case 'background_update':
+                // Handle broadcasting messages to other clients
+                this.broadcast(message, sender);
+                break;
             // case 'generate':
             //     // Handle LLM generation
             //     await this.streamLLMResponse(message.payload.message, sender);
@@ -69,7 +74,7 @@ export class SocketServer {
         }
     }
 
-    private broadcast(message:Message, sender: WebSocket): void {
+    private broadcast(message: Message, sender: WebSocket): void {
         this.clients.forEach(client => {
             if (client !== sender && client.readyState === WebSocket.OPEN) {
                 client.send(JSON.stringify(message));

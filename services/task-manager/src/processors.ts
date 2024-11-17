@@ -10,7 +10,7 @@ interface StreamMessage {
   chunk?: string;
 }
 
-export const processMessage = async (task: Task): Promise<Task> =>
+const processMessage = async (task: Task): Promise<Task> =>
   new Promise((resolve, reject) => {
     if (task.action !== "SEND_MESSAGE") return task;
 
@@ -35,7 +35,7 @@ export const processMessage = async (task: Task): Promise<Task> =>
 
         const response = await ollama.chat({
           // model: "qwen2.5-coder:7b",
-          model: "qwen2.5:32b-instruct-q2_K",
+          model: "qwen2.5-coder:7b",
           messages: [{
             role: "user",
             //@ts-ignore

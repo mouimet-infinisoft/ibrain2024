@@ -18,12 +18,18 @@ async function createStateTaskSendMessageAI(
     const payload: SendMessagePayload = { conversationId, message };
 
     // Call the generic createTaskFactory with the specific action and payload
-    return await createTaskFactory(
+    const newTask = await createTaskFactory(
         "SEND_MESSAGE",
         payload,
         "REALTIME",
         "waiting",
     );
+
+    if (!newTask) {
+        throw new Error("Failed to create task");
+    }
+
+    return newTask;
 }
 
 export async function createTaskSendMessageAI(
