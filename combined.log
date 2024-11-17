@@ -23285,3 +23285,180 @@
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T16:37:22.951Z"}
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T16:37:27.784Z"}
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T16:37:32.804Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T21:51:48.767Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T21:52:42.641Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T21:52:43.248Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"4c6865e9-ea41-4a48-a972-6bd1527cdf97\",\"job_id\":\"644f400c-6c01-45c9-9818-767cde7d6832\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"8c93944f-92fa-488a-bf36-02ab40a415e6\",\"message\":\"hi\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-17T21:59:46.881Z\",\"updated_at\":\"2024-11-17T21:59:46.881Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-17T21:59:46.906Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-17T21:59:46.934Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-17T21:59:46.940Z"}
+{"level":"verbose","message":"Processing realtime task SEND_MESSAGE","timestamp":"2024-11-17T21:59:46.956Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T21:59:46.881+00:00","error":null,"id":"4c6865e9-ea41-4a48-a972-6bd1527cdf97","job_id":"644f400c-6c01-45c9-9818-767cde7d6832","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"hi"},"result":null,"status":"waiting","timestamp":"2024-11-17T21:59:46.998Z","type":"REALTIME","updated_at":"2024-11-17T21:59:46.916+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T21:59:46.881+00:00","error":null,"id":"4c6865e9-ea41-4a48-a972-6bd1527cdf97","job_id":"644f400c-6c01-45c9-9818-767cde7d6832","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"hi"},"result":null,"status":"active","timestamp":"2024-11-17T21:59:47.011Z","type":"REALTIME","updated_at":"2024-11-17T21:59:46.935+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T21:59:48.016Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T21:59:46.881+00:00","error":null,"id":"4c6865e9-ea41-4a48-a972-6bd1527cdf97","job_id":"644f400c-6c01-45c9-9818-767cde7d6832","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"hi"},"result":"Hello! How can I assist you today?","status":"completed","timestamp":"2024-11-17T22:00:31.246Z","type":"REALTIME","updated_at":"2024-11-17T22:00:31.069+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:00:32.266Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:01:35.888Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:01:36.782Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:01:37.814Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:01:43.124Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:01:48.216Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:01:52.904Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:01:54.158Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:01:59.150Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:04.210Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"10f45bcb-82b6-4f38-b5dc-cd7c5d849f46\",\"job_id\":\"0c0fd97c-25d6-4547-9351-bf9cab692cba\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"8c93944f-92fa-488a-bf36-02ab40a415e6\",\"message\":\"what time is it?\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-17T22:02:05.390Z\",\"updated_at\":\"2024-11-17T22:02:05.390Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-17T22:02:05.405Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-17T22:02:05.416Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-17T22:02:05.420Z"}
+{"level":"verbose","message":"Processing realtime task SEND_MESSAGE","timestamp":"2024-11-17T22:02:05.423Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T22:02:05.39+00:00","error":null,"id":"10f45bcb-82b6-4f38-b5dc-cd7c5d849f46","job_id":"0c0fd97c-25d6-4547-9351-bf9cab692cba","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"what time is it?"},"result":null,"status":"waiting","timestamp":"2024-11-17T22:02:05.434Z","type":"REALTIME","updated_at":"2024-11-17T22:02:05.413+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T22:02:05.39+00:00","error":null,"id":"10f45bcb-82b6-4f38-b5dc-cd7c5d849f46","job_id":"0c0fd97c-25d6-4547-9351-bf9cab692cba","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"what time is it?"},"result":null,"status":"active","timestamp":"2024-11-17T22:02:05.439Z","type":"REALTIME","updated_at":"2024-11-17T22:02:05.417+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:06.920Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:09.674Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:14.962Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:19.739Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:24.971Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:30.248Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T22:02:05.39+00:00","error":null,"id":"10f45bcb-82b6-4f38-b5dc-cd7c5d849f46","job_id":"0c0fd97c-25d6-4547-9351-bf9cab692cba","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"what time is it?"},"result":"I'm sorry, but I don't have real-time capabilities to provide the current time. You can easily check the time on your device or by doing a quick search online.","status":"completed","timestamp":"2024-11-17T22:02:34.006Z","type":"REALTIME","updated_at":"2024-11-17T22:02:33.983+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:34.572Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:35.013Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:39.724Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:02:44.100Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"1bb99b54-a98b-4d89-b86a-bccf694f48d2\",\"job_id\":\"b69dd04f-9e73-499d-bd93-9cdd02511c8d\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"8c93944f-92fa-488a-bf36-02ab40a415e6\",\"message\":\"Where can I run nodejs?Service app on the cloud for free tier.\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-17T22:03:34.399Z\",\"updated_at\":\"2024-11-17T22:03:34.399Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-17T22:03:34.429Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-17T22:03:34.435Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-17T22:03:34.438Z"}
+{"level":"verbose","message":"Processing realtime task SEND_MESSAGE","timestamp":"2024-11-17T22:03:34.439Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T22:03:34.399+00:00","error":null,"id":"1bb99b54-a98b-4d89-b86a-bccf694f48d2","job_id":"b69dd04f-9e73-499d-bd93-9cdd02511c8d","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"Where can I run nodejs?Service app on the cloud for free tier."},"result":null,"status":"waiting","timestamp":"2024-11-17T22:03:34.452Z","type":"REALTIME","updated_at":"2024-11-17T22:03:34.433+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T22:03:34.399+00:00","error":null,"id":"1bb99b54-a98b-4d89-b86a-bccf694f48d2","job_id":"b69dd04f-9e73-499d-bd93-9cdd02511c8d","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"Where can I run nodejs?Service app on the cloud for free tier."},"result":null,"status":"active","timestamp":"2024-11-17T22:03:34.457Z","type":"REALTIME","updated_at":"2024-11-17T22:03:34.435+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:03:35.684Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:03:42.697Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"e6d195bb-5468-4bff-a9d3-06ce3d84fb7f\",\"job_id\":\"c9d9b6b7-5a57-4193-b6a1-6656e693f842\",\"action\":\"RESEARCH\",\"payload\":{\"query\":\"Where can I run nodejs?Service app on the cloud for free tier.\",\"conversationId\":\"8c93944f-92fa-488a-bf36-02ab40a415e6\"},\"status\":\"waiting\",\"type\":\"BACKGROUND\",\"created_at\":\"2024-11-17T22:03:48.096Z\",\"updated_at\":\"2024-11-17T22:03:48.096Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-17T22:03:48.106Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-17T22:03:48.112Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-17T22:03:48.115Z"}
+{"level":"verbose","message":"Processing background task RESEARCH","timestamp":"2024-11-17T22:03:48.116Z"}
+{"action":"RESEARCH","created_at":"2024-11-17T22:03:48.096+00:00","error":null,"id":"e6d195bb-5468-4bff-a9d3-06ce3d84fb7f","job_id":"c9d9b6b7-5a57-4193-b6a1-6656e693f842","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","query":"Where can I run nodejs?Service app on the cloud for free tier."},"result":null,"status":"waiting","timestamp":"2024-11-17T22:03:48.119Z","type":"BACKGROUND","updated_at":"2024-11-17T22:03:48.109+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"RESEARCH","created_at":"2024-11-17T22:03:48.096+00:00","error":null,"id":"e6d195bb-5468-4bff-a9d3-06ce3d84fb7f","job_id":"c9d9b6b7-5a57-4193-b6a1-6656e693f842","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","query":"Where can I run nodejs?Service app on the cloud for free tier."},"result":null,"status":"active","timestamp":"2024-11-17T22:03:48.123Z","type":"BACKGROUND","updated_at":"2024-11-17T22:03:48.112+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:04:43.200Z"}
+{"action":"RESEARCH","created_at":"2024-11-17T22:03:48.096+00:00","error":null,"id":"e6d195bb-5468-4bff-a9d3-06ce3d84fb7f","job_id":"c9d9b6b7-5a57-4193-b6a1-6656e693f842","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","query":"Where can I run nodejs?Service app on the cloud for free tier."},"result":"There are several cloud services that offer a free tier for running Node.js applications:\n\n  1. Heroku: Heroku provides a fully functional platform for building, deploying, and managing web applications. The free tier includes a small amount of compute power and storage.\n  2. AWS Free Tier: Amazon Web Services (AWS) offers a free tier that allows users to use select services without incurring charges. The Node.js runtime environment is available as part of the AWS Elastic Beanstalk service.\n  3. Google Cloud Platform Free Tier: Google Cloud Platform provides a free tier for users to explore and test its services. The Node.js runtime environment is available as part of the App Engine service.\n  4. Microsoft Azure Free Tier: Microsoft Azure offers a free tier that allows users to use select services without incurring charges. The Node.js runtime environment is available as part of the Azure App Service.\n\nIt's worth noting that while these services offer a free tier, they may have limitations on usage or require additional setup and configuration. It's important to review the terms and conditions and pricing information before using any of these services for production applications.","status":"completed","timestamp":"2024-11-17T22:05:33.560Z","type":"BACKGROUND","updated_at":"2024-11-17T22:05:33.45+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:05:43.047Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:06:43.269Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T22:03:34.399+00:00","error":null,"id":"1bb99b54-a98b-4d89-b86a-bccf694f48d2","job_id":"b69dd04f-9e73-499d-bd93-9cdd02511c8d","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"Where can I run nodejs?Service app on the cloud for free tier."},"result":"For running Node.js applications in a free-tier service, there are several cloud platforms that offer generous free plans suitable for small projects and development environments. Here are some popular options:\n\n1. **Heroku**: Heroku is one of the most popular cloud platforms for hosting Node.js applications. They provide a free tier that includes up to 500MB of disk space, 200 hours of dyno usage per month, and 10GB of outbound data transfer. This is sufficient for many small-scale applications.\n\n2. **Google Cloud Platform (GCP)**: GCP offers a variety of services, including Compute Engine for virtual machine instances. They have a free tier that includes $300 in credits over the first year, which can be used to run Node.js applications on virtual machines. The basic instances are typically sufficient for small projects.\n\n3. **AWS Free Tier**: Amazon Web Services (AWS) also provides a free tier with limited services and usage. For running Node.js applications, you might use EC2 (Elastic Compute Cloud) instances. The free tier includes 750 hours of t2.micro instance usage per month and some basic storage.\n\n4. **Azure Free Tier**: Microsoft Azure offers a free tier that provides $200 in credit for the first three months and access to various services including Virtual Machines, App Services, and more. For Node.js applications, you can use Azure App Service which is very suitable as it handles the server management.\n\n5. **Firebase Hosting**: If your application primarily serves web pages and you need a simple backend, Firebase Hosting combined with Firebase Functions (which are Node.js-based) can be used. The free tier includes limited usage, including 120GB of bandwidth per month.\n\n6. **Glitch**: Glitch is an online development environment where you can write, run, and share code directly from your browser. It supports many languages, including Node.js, and provides a simple way to deploy applications.\n\n7. **Repl.it**: Repl.it offers free tier that allows you to create coding environments for various programming languages, including Node.js. You can run and host small projects directly on their platform.\n\nEach of these platforms has its own set of features, pricing models, and limitations. Depending on your specific requirements (such as the complexity of your application, the number of users, or the need for real-time data processing), you might choose one over another.","status":"completed","timestamp":"2024-11-17T22:06:50.098Z","type":"REALTIME","updated_at":"2024-11-17T22:06:50.046+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:06:50.988Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:07:42.180Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:08:42.490Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:09:42.175Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:10:42.423Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:11:42.161Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:12:42.516Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:13:42.131Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:14:42.456Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:15:42.133Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:16:42.522Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:17:42.215Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:18:32.681Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:18:38.922Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:18:39.328Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:18:44.141Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:18:49.137Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:18:50.321Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:18:54.095Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"4eb940cf-a36b-4d68-8b67-354731297f51\",\"job_id\":\"6f6fba27-32f5-4823-b9d6-2e2e8142f8c7\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"567464ef-fdfd-4ffc-8e86-a917cab2d70f\",\"message\":\"Hi, can you introduce yourself?\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-17T22:18:57.572Z\",\"updated_at\":\"2024-11-17T22:18:57.572Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-17T22:18:57.583Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-17T22:18:57.587Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-17T22:18:57.588Z"}
+{"level":"verbose","message":"Processing realtime task SEND_MESSAGE","timestamp":"2024-11-17T22:18:57.590Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T22:18:57.572+00:00","error":null,"id":"4eb940cf-a36b-4d68-8b67-354731297f51","job_id":"6f6fba27-32f5-4823-b9d6-2e2e8142f8c7","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Hi, can you introduce yourself?"},"result":null,"status":"waiting","timestamp":"2024-11-17T22:18:57.603Z","type":"REALTIME","updated_at":"2024-11-17T22:18:57.585+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T22:18:57.572+00:00","error":null,"id":"4eb940cf-a36b-4d68-8b67-354731297f51","job_id":"6f6fba27-32f5-4823-b9d6-2e2e8142f8c7","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Hi, can you introduce yourself?"},"result":null,"status":"active","timestamp":"2024-11-17T22:18:57.606Z","type":"REALTIME","updated_at":"2024-11-17T22:18:57.587+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:18:58.576Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:18:59.246Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:04.285Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:09.346Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:14.538Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:19.635Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:24.696Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:29.033Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:34.955Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:40.206Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:45.005Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-17T22:18:57.572+00:00","error":null,"id":"4eb940cf-a36b-4d68-8b67-354731297f51","job_id":"6f6fba27-32f5-4823-b9d6-2e2e8142f8c7","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Hi, can you introduce yourself?"},"result":"Hello! I'm iBrain One, a sophisticated artificial intelligence designed to assist with a wide range of tasks. My capabilities include answering questions, providing information, helping with problem-solving, and engaging in conversation on various topics. How can I assist you today?","status":"completed","timestamp":"2024-11-17T22:19:48.139Z","type":"REALTIME","updated_at":"2024-11-17T22:19:48.077+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:49.096Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:49.164Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:54.152Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:19:59.151Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:04.084Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:09.191Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:14.117Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:19.163Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:24.126Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:29.205Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:37.562Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:44.150Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:49.106Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:54.281Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:20:59.207Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:21:04.220Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:21:09.116Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:21:14.119Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:21:19.100Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:21:24.121Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:21:29.161Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:21:34.130Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:21:39.113Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:22:42.454Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:23:42.114Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:24:42.447Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:25:42.387Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:26:42.446Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:27:42.180Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:28:42.477Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:29:42.092Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:30:42.428Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:31:42.220Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:32:42.438Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:33:42.185Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:34:42.540Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:35:42.109Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:36:42.461Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:37:42.119Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:38:42.439Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:39:42.155Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:40:42.768Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:41:42.159Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:42:42.453Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:43:42.087Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:44:42.390Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:45:42.196Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:46:42.446Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:47:42.164Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:48:42.420Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:49:42.119Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:50:42.458Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:51:42.199Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:52:42.495Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:53:42.211Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:54:42.500Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:55:42.198Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:56:42.565Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:57:42.120Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:58:42.530Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T22:59:42.261Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:00:42.539Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:01:42.217Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:02:42.537Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:03:42.204Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:04:42.558Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:05:42.217Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:06:42.527Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:07:42.180Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:08:42.460Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:09:42.231Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:10:42.418Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:11:42.129Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:12:42.472Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:13:42.142Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:14:42.498Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:15:42.117Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:16:42.439Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:17:42.417Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:18:42.401Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:19:42.205Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:20:42.453Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:21:42.112Z"}
