@@ -1,24 +1,21 @@
-"use server"
+"use server";
 
-import { TaskQueueClient } from "../utils/task.server";
+import { getInstance } from "@brainstack/inject";
+import { TaskQueueClient } from "../../../../services/task-manager-service/src/task-queue/TaskQueueClient";
+import { TaskFactory } from "../../../../services/task-manager-service/src/tasks/TaskFactory";
 
-// Create Redis connection
-const redisConfig = {
-  host: "192.168.10.2",
-  port: 6379,
-};
-
-export const sendMsg = async (message:string) => {
-  // Client-side (just enqueueing)
-  const client = new TaskQueueClient(redisConfig);
-//   await client.enqueueTask("emails", {
-//     type: "email",
-//     action: "send",
-//     data: { to: "user@example.com", message },
-//   });
-  await client.enqueueTask("message", {
-    type: "message",
-    action: "send",
-    data: { message },
+export const sendMsg = async (message: string) => {
+  const client = getInstance(TaskQueueClient);
+  // Using TaskFactory for type-safe task creation
+  const messageTask = TaskFactory.create("message", "send", {
+    message,
   });
+
+  // const emailTask = TaskFactory.create("message", "email", {
+  //   message,
+  // });
+
+  // Enqueue tasks
+  await client.enqueueTask("message", messageTask);
+  // await client.enqueueTask("message", emailTask);
 };

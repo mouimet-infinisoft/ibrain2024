@@ -1,50 +1,24 @@
-import { Queue, Worker, Job } from 'bullmq';
-import { Redis, RedisOptions } from 'ioredis';
-import { Logger } from 'winston'; // Assuming a standard logging library
+import { Queue, Worker } from "bullmq";
+import { TaskProcessor, QueueConfig, BaseTask,} from "../types";
+import { Inject } from "@brainstack/inject";
+import { LoggerService } from "../../../logger/logger.service";
+import { RedisConnexion } from "../config/RedisConnexion";
 
-// Replace with your actual logger import or create a mock logger
-const createLogger = (): Logger => {
-  return {
-    verbose: console.log,
-    warn: console.warn,
-    error: console.error,
-    info: console.info
-  } as Logger;
-};
+/**
+ * TaskQueueServer - Full-featured queue management for processing tasks
+ * Provides complete queue creation, worker management, and task processing
+ */
 
-const logger = createLogger();
-
-// Base task interface
-export interface BaseTask {
-  type: string;
-  action: string;
-  priority?: 'low' | 'medium' | 'high';
-  retryAttempts?: number;
-  [key: string]: any;
-}
-
-// Task processor type
-export type TaskProcessor<T extends BaseTask = BaseTask> = (task: T) => Promise<{ result: any }>;
-
-// Queue configuration interface
-export interface QueueConfig {
-  name: string;
-  concurrency?: number;
-  defaultRetryAttempts?: number;
-}
-
-class MultiQueueTaskManager {
+export class TaskQueueServer {
   private queues: Map<string, Queue>;
   private workers: Map<string, Worker>;
   private processors: Map<string, Map<string, TaskProcessor>>;
-  private connection: RedisOptions;
 
   /**
-   * Create a new MultiQueueTaskManager instance
+   * Create a new TaskQueueServer instance
    * @param connection Redis connection options
    */
-  constructor(connection: RedisOptions) {
-    this.connection = connection;
+  constructor(@Inject private connection: RedisConnexion, @Inject private logger: LoggerService) {
     this.queues = new Map();
     this.workers = new Map();
     this.processors = new Map();
@@ -56,10 +30,8 @@ class MultiQueueTaskManager {
    * @returns This instance for chaining
    */
   createQueue(config: QueueConfig): this {
-    const { 
-      name, 
-      concurrency = 3, 
-      defaultRetryAttempts = 3 
+    const {
+      name, concurrency = 3, defaultRetryAttempts = 3
     } = config;
 
     // Prevent duplicate queue creation
@@ -68,7 +40,7 @@ class MultiQueueTaskManager {
     }
 
     // Create queue and processor map
-    const queue = new Queue(name, { 
+    const queue = new Queue(name, {
       connection: this.connection,
       defaultJobOptions: {
         attempts: defaultRetryAttempts,
@@ -78,7 +50,7 @@ class MultiQueueTaskManager {
         }
       }
     });
-    
+
     // Store queue
     this.queues.set(name, queue);
     this.processors.set(name, new Map());
@@ -94,12 +66,12 @@ class MultiQueueTaskManager {
    * @returns This instance for chaining
    */
   registerProcessor<T extends BaseTask>(
-    queueName: string, 
-    action: string, 
+    queueName: string,
+    action: string,
     processor: TaskProcessor<T>
   ): this {
     const queueProcessors = this.processors.get(queueName);
-    
+
     if (!queueProcessors) {
       throw new Error(`Queue ${queueName} does not exist`);
     }
@@ -123,14 +95,14 @@ class MultiQueueTaskManager {
 
     // Prevent duplicate worker creation
     if (this.workers.has(queueName)) {
-      logger.warn(`Worker for queue ${queueName} already running`);
+      this.logger.warn(`Worker for queue ${queueName} already running`);
       return;
     }
 
     const worker = new Worker(queueName, async (job) => {
       const task = job.data as BaseTask;
-      
-      logger.verbose(
+
+      this.logger.verbose(
         `Processing job in queue ${queueName}:`,
         JSON.stringify(task)
       );
@@ -139,7 +111,7 @@ class MultiQueueTaskManager {
 
       // Find and execute the appropriate processor
       const processor = queueProcessors?.get(task.action);
-      
+
       if (!processor) {
         throw new Error(`No processor found for action: ${task.action} in queue: ${queueName}`);
       }
@@ -149,48 +121,23 @@ class MultiQueueTaskManager {
         job.returnvalue = result.result;
         return result.result;
       } catch (error) {
-        logger.error(`Error processing task ${task.action} in queue ${queueName}:`, error);
+        this.logger.error(`Error processing task ${task.action} in queue ${queueName}:`, error);
         throw error;
       }
-    }, { 
-      connection: this.connection, 
-      concurrency: customConcurrency ?? 3 
+    }, {
+      connection: this.connection,
+      concurrency: customConcurrency ?? 3
     });
 
     // Add error handling
     worker.on('error', (error) => {
-      logger.error(`Worker for queue ${queueName} encountered an error:`, error);
+      this.logger.error(`Worker for queue ${queueName} encountered an error:`, error);
     });
 
     // Store the worker
     this.workers.set(queueName, worker);
 
-    logger.info(`Worker started for queue: ${queueName}`);
-  }
-
-  /**
-   * Enqueue a task to a specific queue
-   * @param queueName Queue to enqueue task to
-   * @param task Task to enqueue
-   * @returns Job representing the enqueued task
-   */
-  async enqueueTask(queueName: string, task: BaseTask): Promise<Job> {
-    const queue = this.queues.get(queueName);
-
-    if (!queue) {
-      throw new Error(`Queue ${queueName} does not exist`);
-    }
-
-    // Set job options based on task priority
-    const jobOptions = task.priority 
-      ? { 
-          priority: task.priority === 'high' ? 1 : 
-                    task.priority === 'medium' ? 5 : 10 
-        } 
-      : {};
-
-    logger.verbose(`Enqueuing task in queue ${queueName}:`, task);
-    return queue.add(task.action, task, jobOptions);
+    this.logger.info(`Worker started for queue: ${queueName}`);
   }
 
   /**
@@ -201,26 +148,13 @@ class MultiQueueTaskManager {
     const worker = this.workers.get(queueName);
 
     if (!worker) {
-      logger.warn(`No worker running for queue: ${queueName}`);
+      this.logger.warn(`No worker running for queue: ${queueName}`);
       return;
     }
 
     await worker.close();
     this.workers.delete(queueName);
-    logger.info(`Worker stopped for queue: ${queueName}`);
-  }
-
-  /**
-   * Get a specific queue
-   * @param queueName Name of the queue
-   * @returns Queue instance
-   */
-  getQueue(queueName: string): Queue {
-    const queue = this.queues.get(queueName);
-    if (!queue) {
-      throw new Error(`Queue ${queueName} does not exist`);
-    }
-    return queue;
+    this.logger.info(`Worker stopped for queue: ${queueName}`);
   }
 
   /**
@@ -237,8 +171,6 @@ class MultiQueueTaskManager {
       await queue.close();
     }
 
-    logger.info('All queues and workers closed');
+    this.logger.info('All queues and workers closed');
   }
 }
-
-export default MultiQueueTaskManager;

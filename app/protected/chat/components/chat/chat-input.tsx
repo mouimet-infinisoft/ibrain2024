@@ -8,6 +8,8 @@ import { useEffect, useRef } from "react";
 import { SpeechToText } from "@/components/ui/speech-to-text";
 import { useSpeechToText } from "@/lib/hooks/use-speech-to-text";
 import { TSendMessage } from "../../[conversationId]/page";
+import { sendMsg } from "@/app/protected/code/actions/send.message";
+import { m } from "framer-motion";
 
 export function ChatInput({
   conversationId,
@@ -36,7 +38,8 @@ export function ChatInput({
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const message = formData.get("message") as string;
-        const task = await sendMessage(conversationId, message);
+        // const task = await sendMessage(conversationId, message);
+        await sendMsg(message)
         if (inputRef.current) {
           inputRef.current.value = ""
         }

@@ -1,9 +1,8 @@
 import { Queue, Job } from "bullmq";
-import { RedisOptions } from "ioredis";
-import { BaseTask, } from "./types";
 import { Inject } from "@brainstack/inject";
-import { LoggerService } from "../../logger/logger.service";
-import { RedisConnexion } from "./RedisConnexion";
+import { LoggerService } from "../../../logger/logger.service";
+import { RedisConnexion } from "../config/RedisConnexion";
+import { BaseTask } from "../types";
 
 
 /**
@@ -44,16 +43,9 @@ export class TaskQueueClient {
   async enqueueTask(queueName: string, task: BaseTask): Promise<Job> {
     const queue = this.getOrCreateQueue(queueName);
 
-    // Set job options based on task priority
-    const jobOptions = task.priority
-      ? {
-        priority: task.priority === 'high' ? 1 :
-          task.priority === 'medium' ? 5 : 10
-      }
-      : {};
 
     this.logger.verbose(`Enqueueing task in queue ${queueName}:`, task);
-    return queue.add(task.action, task, jobOptions);
+    return queue.add(task.action, task, task.jobOptions);
   }
 
   /**
