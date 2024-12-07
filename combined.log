@@ -23462,3 +23462,262 @@
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:19:42.205Z"}
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:20:42.453Z"}
 {"level":"info","message":"Redis Client Connected","timestamp":"2024-11-17T23:21:42.112Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T12:58:45.778Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T12:59:20.397Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T12:59:20.833Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T12:59:38.947Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"cb800b03-7f7d-4c55-9e6d-5076ee44853e\",\"job_id\":\"4516420a-8f84-43b3-8a67-14661f594668\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"8c93944f-92fa-488a-bf36-02ab40a415e6\",\"message\":\"hi\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-21T12:59:41.105Z\",\"updated_at\":\"2024-11-21T12:59:41.105Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-21T12:59:41.128Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-21T12:59:41.152Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-21T12:59:41.157Z"}
+{"level":"verbose","message":"Processing realtime task SEND_MESSAGE","timestamp":"2024-11-21T12:59:41.177Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T12:59:41.105+00:00","error":null,"id":"cb800b03-7f7d-4c55-9e6d-5076ee44853e","job_id":"4516420a-8f84-43b3-8a67-14661f594668","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"hi"},"result":null,"status":"waiting","timestamp":"2024-11-21T12:59:41.218Z","type":"REALTIME","updated_at":"2024-11-21T12:59:41.134+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T12:59:41.105+00:00","error":null,"id":"cb800b03-7f7d-4c55-9e6d-5076ee44853e","job_id":"4516420a-8f84-43b3-8a67-14661f594668","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"hi"},"result":null,"status":"active","timestamp":"2024-11-21T12:59:41.233Z","type":"REALTIME","updated_at":"2024-11-21T12:59:41.152+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T12:59:42.091Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T12:59:41.105+00:00","error":null,"id":"cb800b03-7f7d-4c55-9e6d-5076ee44853e","job_id":"4516420a-8f84-43b3-8a67-14661f594668","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"8c93944f-92fa-488a-bf36-02ab40a415e6","message":"hi"},"result":"Hello! How can I assist you today?","status":"completed","timestamp":"2024-11-21T13:00:14.702Z","type":"REALTIME","updated_at":"2024-11-21T13:00:14.664+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:00:15.621Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:03:57.649Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"44c093ae-ffe7-4e86-80ac-a18156c80c28\",\"job_id\":\"a383c8f1-be59-418c-b99c-1528bbbad111\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"567464ef-fdfd-4ffc-8e86-a917cab2d70f\",\"message\":\"Hello there, can you introduce yourself?\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-21T13:04:04.322Z\",\"updated_at\":\"2024-11-21T13:04:04.322Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-21T13:04:04.334Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-21T13:04:04.343Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-21T13:04:04.346Z"}
+{"level":"verbose","message":"Processing realtime task SEND_MESSAGE","timestamp":"2024-11-21T13:04:04.348Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T13:04:04.322+00:00","error":null,"id":"44c093ae-ffe7-4e86-80ac-a18156c80c28","job_id":"a383c8f1-be59-418c-b99c-1528bbbad111","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Hello there, can you introduce yourself?"},"result":null,"status":"waiting","timestamp":"2024-11-21T13:04:04.369Z","type":"REALTIME","updated_at":"2024-11-21T13:04:04.341+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T13:04:04.322+00:00","error":null,"id":"44c093ae-ffe7-4e86-80ac-a18156c80c28","job_id":"a383c8f1-be59-418c-b99c-1528bbbad111","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Hello there, can you introduce yourself?"},"result":null,"status":"active","timestamp":"2024-11-21T13:04:04.398Z","type":"REALTIME","updated_at":"2024-11-21T13:04:04.344+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:04:05.843Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T13:04:04.322+00:00","error":null,"id":"44c093ae-ffe7-4e86-80ac-a18156c80c28","job_id":"a383c8f1-be59-418c-b99c-1528bbbad111","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Hello there, can you introduce yourself?"},"result":"Hello! I'm iBrain One, a sophisticated artificial intelligence designed to assist and interact with users effectively. My capabilities include processing natural language, providing information, helping with tasks, and learning from interactions to improve my performance over time. How can I assist you today?","status":"completed","timestamp":"2024-11-21T13:04:41.170Z","type":"REALTIME","updated_at":"2024-11-21T13:04:41.103+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:04:42.113Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"88260b23-7f6f-4c75-b873-7113b7455776\",\"job_id\":\"e0aea8f3-4b74-43fc-98e3-19b785d1328d\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"conversationId\":\"567464ef-fdfd-4ffc-8e86-a917cab2d70f\",\"message\":\"Could you generate a TypeScript code that we react component as an example?\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-21T13:05:15.580Z\",\"updated_at\":\"2024-11-21T13:05:15.580Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-21T13:05:15.609Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-21T13:05:15.614Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-21T13:05:15.616Z"}
+{"level":"verbose","message":"Processing realtime task SEND_MESSAGE","timestamp":"2024-11-21T13:05:15.617Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T13:05:15.58+00:00","error":null,"id":"88260b23-7f6f-4c75-b873-7113b7455776","job_id":"e0aea8f3-4b74-43fc-98e3-19b785d1328d","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Could you generate a TypeScript code that we react component as an example?"},"result":null,"status":"waiting","timestamp":"2024-11-21T13:05:15.631Z","type":"REALTIME","updated_at":"2024-11-21T13:05:15.612+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T13:05:15.58+00:00","error":null,"id":"88260b23-7f6f-4c75-b873-7113b7455776","job_id":"e0aea8f3-4b74-43fc-98e3-19b785d1328d","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Could you generate a TypeScript code that we react component as an example?"},"result":null,"status":"active","timestamp":"2024-11-21T13:05:15.636Z","type":"REALTIME","updated_at":"2024-11-21T13:05:15.614+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:05:17.215Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"e177961a-0814-4ac4-bb56-6265454cb74f\",\"job_id\":\"11c2693e-5fe7-40f0-8319-9110d3f1fa34\",\"action\":\"GENERATE_CODE\",\"payload\":{\"prompt\":\"Could you generate a TypeScript code that we react component as an example?\",\"conversationId\":\"567464ef-fdfd-4ffc-8e86-a917cab2d70f\"},\"status\":\"waiting\",\"type\":\"BACKGROUND\",\"created_at\":\"2024-11-21T13:05:30.904Z\",\"updated_at\":\"2024-11-21T13:05:30.904Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-21T13:05:30.915Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-21T13:05:30.919Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-21T13:05:30.921Z"}
+{"level":"verbose","message":"Processing background task GENERATE_CODE","timestamp":"2024-11-21T13:05:30.923Z"}
+{"action":"GENERATE_CODE","created_at":"2024-11-21T13:05:30.904+00:00","error":null,"id":"e177961a-0814-4ac4-bb56-6265454cb74f","job_id":"11c2693e-5fe7-40f0-8319-9110d3f1fa34","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","prompt":"Could you generate a TypeScript code that we react component as an example?"},"result":null,"status":"waiting","timestamp":"2024-11-21T13:05:30.929Z","type":"BACKGROUND","updated_at":"2024-11-21T13:05:30.918+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"GENERATE_CODE","created_at":"2024-11-21T13:05:30.904+00:00","error":null,"id":"e177961a-0814-4ac4-bb56-6265454cb74f","job_id":"11c2693e-5fe7-40f0-8319-9110d3f1fa34","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","prompt":"Could you generate a TypeScript code that we react component as an example?"},"result":null,"status":"active","timestamp":"2024-11-21T13:05:30.933Z","type":"BACKGROUND","updated_at":"2024-11-21T13:05:30.919+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T13:05:15.58+00:00","error":null,"id":"88260b23-7f6f-4c75-b873-7113b7455776","job_id":"e0aea8f3-4b74-43fc-98e3-19b785d1328d","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Could you generate a TypeScript code that we react component as an example?"},"result":"I'm working on it and it's coming soon!","status":"completed","timestamp":"2024-11-21T13:05:54.850Z","type":"REALTIME","updated_at":"2024-11-21T13:05:54.811+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:05:57.265Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:10.650Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:12.310Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:14.495Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:16.984Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:18.798Z"}
+{"level":"info","message":"Task successfully inserted into Supabase: {\"id\":\"044d4567-c612-491e-a7c5-feccc00f4efb\",\"job_id\":\"af4b0227-aea7-4bfa-a9d5-4009efa7b25e\",\"action\":\"SEND_MESSAGE\",\"payload\":{\"message\":\"Tell the user that the code generation background task is complete.\",\"conversationId\":\"567464ef-fdfd-4ffc-8e86-a917cab2d70f\",\"sender\":\"system\"},\"status\":\"waiting\",\"type\":\"REALTIME\",\"created_at\":\"2024-11-21T13:06:23.704Z\",\"updated_at\":\"2024-11-21T13:06:23.704Z\",\"user_id\":\"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea\",\"result\":null,\"error\":null}","timestamp":"2024-11-21T13:06:23.748Z"}
+{"action":"GENERATE_CODE","created_at":"2024-11-21T13:05:30.904+00:00","error":null,"id":"e177961a-0814-4ac4-bb56-6265454cb74f","job_id":"11c2693e-5fe7-40f0-8319-9110d3f1fa34","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","prompt":"Could you generate a TypeScript code that we react component as an example?"},"result":"```typescript\nimport React from 'react';\n\ninterface ExampleComponentProps {\n  title: string;\n  description: string;\n}\n\nconst ExampleComponent: React.FC<ExampleComponentProps> = ({ title, description }) => {\n  return (\n    <div>\n      <h1>{title}</h1>\n      <p>{description}</p>\n    </div>\n  );\n};\n\nexport default ExampleComponent;\n```","status":"completed","timestamp":"2024-11-21T13:06:23.772Z","type":"BACKGROUND","updated_at":"2024-11-21T13:06:23.644+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-11-21T13:06:23.788Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-11-21T13:06:23.791Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T13:06:23.704+00:00","error":null,"id":"044d4567-c612-491e-a7c5-feccc00f4efb","job_id":"af4b0227-aea7-4bfa-a9d5-4009efa7b25e","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Tell the user that the code generation background task is complete.","sender":"system"},"result":null,"status":"waiting","timestamp":"2024-11-21T13:06:23.793Z","type":"REALTIME","updated_at":"2024-11-21T13:06:23.752+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"verbose","message":"Processing realtime task SEND_MESSAGE","timestamp":"2024-11-21T13:06:23.795Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T13:06:23.704+00:00","error":null,"id":"044d4567-c612-491e-a7c5-feccc00f4efb","job_id":"af4b0227-aea7-4bfa-a9d5-4009efa7b25e","level":"verbose","message":"updateState successful! Result: ","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Tell the user that the code generation background task is complete.","sender":"system"},"result":null,"status":"active","timestamp":"2024-11-21T13:06:23.808Z","type":"REALTIME","updated_at":"2024-11-21T13:06:23.789+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:23.813Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:28.837Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:33.659Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:39.156Z"}
+{"level":"info","message":"Completed job 044d4567-c612-491e-a7c5-feccc00f4efb 044d4567-c612-491e-a7c5-feccc00f4efb on queue worker with result Task completed. The code generation has been finished and any requested output or files have been provided to you. If there were any specific instructions or preferences regarding the code (e.g., language, style, functionality), please let me know if there's anything else I can assist with!","timestamp":"2024-11-21T13:06:47.249Z"}
+{"action":"SEND_MESSAGE","created_at":"2024-11-21T13:06:23.704+00:00","error":null,"id":"044d4567-c612-491e-a7c5-feccc00f4efb","job_id":"af4b0227-aea7-4bfa-a9d5-4009efa7b25e","level":"info","message":"Task completed successfully:","parent_task_id":null,"payload":{"conversationId":"567464ef-fdfd-4ffc-8e86-a917cab2d70f","message":"Tell the user that the code generation background task is complete.","sender":"system"},"result":"Task completed. The code generation has been finished and any requested output or files have been provided to you. If there were any specific instructions or preferences regarding the code (e.g., language, style, functionality), please let me know if there's anything else I can assist with!","status":"completed","timestamp":"2024-11-21T13:06:47.280Z","type":"REALTIME","updated_at":"2024-11-21T13:06:47.245+00:00","user_id":"f7bebd3a-bafb-40fd-b60f-0ab18cac4dea"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:47.582Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-11-21T13:06:48.288Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:51:58.818Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:01.935Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:05.065Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:08.175Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:11.296Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:14.415Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:17.535Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:21.460Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:24.579Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:27.699Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:30.820Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:33.939Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:37.069Z"}
+{"address":"192.168.10.2","code":"EHOSTUNREACH","errno":-113,"level":"error","message":"Redis Client Error: connect EHOSTUNREACH 192.168.10.2:6379","port":6379,"stack":"Error: connect EHOSTUNREACH 192.168.10.2:6379\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1607:16)","syscall":"connect","timestamp":"2024-12-06T17:52:40.190Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T17:52:40.893Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T17:54:29.682Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T17:54:30.168Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T17:56:48.839Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T17:57:08.145Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T17:57:08.792Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T17:59:58.596Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T17:59:59.465Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T19:26:34.986Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-06T19:33:26.010Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T01:45:02.637Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-12-07T08:22:18.906Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-12-07T08:22:18.911Z"}
+{"level":"verbose","message":"Processing realtime task send-message","timestamp":"2024-12-07T08:22:18.926Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:09:54.409Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-12-07T09:09:54.481Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-12-07T09:09:54.484Z"}
+{"level":"verbose","message":"Processing realtime task send-message","timestamp":"2024-12-07T09:09:54.487Z"}
+{"level":"verbose","message":"Processing background task cleanup","timestamp":"2024-12-07T09:09:54.490Z"}
+{"level":"info","message":"Completed job 174 send-message on queue worker with result undefined","timestamp":"2024-12-07T09:09:54.513Z"}
+{"level":"error","message":"Failed job 176 cleanup on queue worker","timestamp":"2024-12-07T09:09:54.558Z"}
+{"code":"22P02","details":null,"hint":null,"level":"error","message":"Failed to handle task completion: invalid input syntax for type uuid: \"174\"","timestamp":"2024-12-07T09:09:54.574Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-12-07T09:09:55.615Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-12-07T09:09:55.621Z"}
+{"level":"verbose","message":"Processing background task cleanup","timestamp":"2024-12-07T09:09:55.623Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:23:48.180Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:23:48.987Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:23:50.109Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:23:52.386Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:23:53.511Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:23:58.493Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:03.578Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:04.690Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:09.424Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:14.875Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:17.184Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:22.085Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:27.186Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:32.085Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:37.136Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:38.693Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:42.002Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:46.932Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:51.943Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:56.536Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:58.845Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:24:59.761Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:01.970Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:05.823Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:06.958Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:12.026Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:16.637Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:21.727Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:26.701Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:32.495Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:37.109Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:42.034Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:47.033Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:52.117Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:25:57.112Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:02.153Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:07.172Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:12.096Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:19.048Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:20.152Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:21.517Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:22.247Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:27.106Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:33.203Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:34.136Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:36.551Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:37.437Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:26:46.360Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:27:46.262Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:04.679Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:05.813Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:07.551Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:11.605Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:12.485Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:24.422Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:25.284Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:26.386Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:27.189Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:28:46.428Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:29:10.696Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T09:29:11.739Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T11:10:32.840Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-12-07T11:10:32.878Z"}
+{"level":"verbose","message":"Processing realtime task send-message","timestamp":"2024-12-07T11:10:32.879Z"}
+{"level":"info","message":"Completed job 182 send-message on queue worker with result undefined","timestamp":"2024-12-07T11:10:32.903Z"}
+{"code":"22P02","details":null,"hint":null,"level":"error","message":"Failed to handle task completion: invalid input syntax for type uuid: \"182\"","timestamp":"2024-12-07T11:10:32.941Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-12-07T11:11:05.716Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:04.660Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:05.358Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:06.229Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:08.970Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:13.776Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:17.394Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:22.041Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:26.641Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:31.252Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:36.226Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:40.906Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:45.440Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:52.826Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:25:57.487Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:26:02.104Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:26:06.631Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:26:11.500Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:26:15.858Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:26:20.408Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:26:27.835Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:26:32.475Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:26:46.448Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:27:47.103Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:28:27.159Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:28:31.202Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:28:35.847Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:28:40.395Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:28:44.968Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:28:52.488Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:28:57.048Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:29:01.728Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:29:06.296Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:29:10.843Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:29:15.458Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:29:20.061Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:29:27.550Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:29:46.138Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:30:46.825Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:31:21.787Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:31:27.223Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:31:47.628Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:31:57.817Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:32:04.081Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:32:05.915Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:32:45.912Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:33:01.353Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:33:02.275Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:33:40.983Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:33:42.832Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:33:47.232Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:33:57.220Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:00.881Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:09.290Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:20.301Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:21.096Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:25.519Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:30.113Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:41.880Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:42.871Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:47.958Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:55.747Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:34:57.458Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:02.160Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:08.373Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:25.137Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:25.850Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:32.443Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:33.269Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:36.831Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:37.724Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:39.509Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:40.173Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:44.806Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:52.447Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:35:53.458Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:04.824Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:05.813Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:07.889Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:08.822Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:14.583Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:18.915Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:25.729Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:30.217Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:33.983Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:36:34.717Z"}
+{"level":"info","message":"Redis Client Connected","timestamp":"2024-12-07T12:37:48.555Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-12-07T12:37:48.598Z"}
+{"level":"verbose","message":"Processing realtime task send-message","timestamp":"2024-12-07T12:37:48.600Z"}
+{"level":"info","message":"Completed job 192 send-message on queue worker with result undefined","timestamp":"2024-12-07T12:37:48.619Z"}
+{"code":"22P02","details":null,"hint":null,"level":"error","message":"Failed to handle task completion: invalid input syntax for type uuid: \"192\"","timestamp":"2024-12-07T12:37:48.692Z"}
+{"level":"verbose","message":"queueEvents event on failed with jobId: ","timestamp":"2024-12-07T12:38:21.678Z"}
+{"level":"verbose","message":"queueEvents event on active with jobId: ","timestamp":"2024-12-07T12:38:21.685Z"}
+{"level":"error","message":"Failed job 190 send-message on queue worker","timestamp":"2024-12-07T12:38:21.692Z"}
+{"level":"verbose","message":"Worker realtime-tasks processing job:","timestamp":"2024-12-07T12:38:21.693Z"}
+{"level":"verbose","message":"Processing realtime task send-message","timestamp":"2024-12-07T12:38:21.699Z"}

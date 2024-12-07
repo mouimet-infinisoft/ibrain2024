@@ -100,6 +100,26 @@ const data = {
       ],
     },
     {
+      title: "Code",
+      url: "/protected/code",
+      icon: SquareTerminal,
+      isActive: true,
+      // items: [
+      //   {
+      //     title: "History",
+      //     url: "/protected/chat",
+      //   },
+      //   {
+      //     title: "New",
+      //     url: "/protected/chat",
+      //   },
+        // {
+        //   title: "Settings",
+        //   url: "#",
+        // },
+      // ],
+    },
+    {
       title: "Task Manager",
       url: "/protected/task-manager",
       icon:   ActivityIcon,
