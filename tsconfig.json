@@ -33,6 +33,7 @@
     "global.d.ts",
     "lib/**/*.ts",
     "services/task-manager-service/src/**/*.ts",
+    "services/intent-engine/**/*.ts",
   ],
   "exclude": ["node_modules","services"]
 }

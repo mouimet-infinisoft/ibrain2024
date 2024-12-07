@@ -26,6 +26,7 @@
     "@radix-ui/react-tooltip": "^1.1.3",
     "@supabase/ssr": "latest",
     "@supabase/supabase-js": "^2.46.1",
+    "@tensorflow/tfjs-node": "^4.22.0",
     "@types/ioredis": "^5.0.0",
     "@typescript-eslint/parser": "^8.14.0",
     "@typescript-eslint/types": "^8.14.0",
@@ -43,10 +44,13 @@
     "hono": "^4.6.8",
     "ioredis": "^5.4.1",
     "lucide-react": "^0.436.0",
+    "ml-matrix": "^6.12.0",
     "monaco-editor": "^0.52.0",
+    "natural": "^8.0.1",
     "next": "latest",
     "next-themes": "^0.3.0",
     "ollama": "^0.5.9",
+    "openai": "^4.76.0",
     "prettier": "^3.3.3",
     "prom-client": "^15.1.3",
     "react": "18.2.0",
@@ -58,7 +62,8 @@
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "uuid": "^11.0.2",
-    "winston": "^3.16.0"
+    "winston": "^3.16.0",
+    "word2vec": "^1.1.5"
   },
   "devDependencies": {
     "@octokit/rest": "^21.0.2",
