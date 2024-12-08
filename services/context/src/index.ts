@@ -77,7 +77,7 @@ export class ContextService {
         offset?: number;
     }) {
         try {
-            const query = this.dbService.find();
+            const query = this.dbService.find({limit:options?.limit});
             // Implement pagination if needed
             return query;
         } catch (error) {

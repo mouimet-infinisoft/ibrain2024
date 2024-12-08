@@ -1,4 +1,4 @@
-// src/app/api/queues/[[...index]]/route.ts
+// @ts-nocheck
 
 import { createBullBoard } from "@bull-board/api";
 import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
@@ -15,7 +15,7 @@ const serverAdapter = new HonoAdapter(serveStatic);
 
 // Create Bull Board with your queues
 createBullBoard({
-  queues: [new BullMQAdapter(new Queue('message')),new BullMQAdapter(new Queue('realtime-tasks'))],
+  queues: [new BullMQAdapter(new Queue('workflows')),new BullMQAdapter(new Queue('message')),new BullMQAdapter(new Queue('realtime-tasks'))],
   serverAdapter,
 });
 

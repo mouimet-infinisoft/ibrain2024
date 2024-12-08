@@ -35,3 +35,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+*.log
+combined.log
+error.log
+services/loader/all.codebase.json
+services/loader/all.services.codebase.json

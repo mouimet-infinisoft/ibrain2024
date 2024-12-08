@@ -37,4 +37,8 @@ export const legacyCodeRefactoringWorkflow  =
             "architecture",
             "upgrade",
         ],
+        flow: {
+            name:"Legacy Code Refactoring Workflow",
+            queueName:"workflows"
+        }
     })

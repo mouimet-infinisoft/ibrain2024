@@ -67,9 +67,16 @@ export class ResponseGenerationService {
     context?: any;
   }): string {
     // Combine input with contextual information
+    const currentTime = new Date();
+    const currentTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const currentDateString = currentTime.toLocaleDateString();
+    const currentTimeString = currentTime.toLocaleTimeString();
+
     const contextualPrompt = options.context
       ? `
 Context:
+- You name is iBrain One and you are an AI friend.
+- You are in timezone ${currentTimezone}, we are the ${currentDateString} and current time is ${currentTimeString}.
 - Previous interactions: ${JSON.stringify(options.context)}
 
 User Input: ${options.input}
@@ -96,7 +103,7 @@ Please generate a response that is:
 
     // Alternatively, fetch recent conversation history
     const recentHistory = await this.contextService.getConversationHistory({
-      limit: 3, // Last 3 conversation entries
+      limit: 50, 
     });
 
     return recentHistory;

@@ -34,7 +34,7 @@
     "lib/**/*.ts",
     "services/task-manager-service/src/**/*.ts",
     "services/intent-engine/**/*.ts",
-    "services/workflow-orchestrator/**/*.ts",
+    "services/workflow-orchestrator/**/*.ts", "services/task-manager/src/processors/email.processor.ts.old", "services/task-manager/src/processors/message.processor.ts.old",
   ],
   "exclude": ["node_modules","services"]
 }

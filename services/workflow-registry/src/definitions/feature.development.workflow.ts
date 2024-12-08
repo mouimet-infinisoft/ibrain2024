@@ -37,5 +37,19 @@ export const featureDevelopmentWorkflow =    // Feature Development Workflow
             "user story",
             "requirements",
         ],
+        flow: {
+            name: "Feature Development and Integration Workflow",
+            queueName: "workflows",
+            data:{type:'dddd', action:"dddd"},
+            children: [
+                {
+                    name: "dddd",
+                    queueName: "dddd",
+                    opts:{
+                        
+                    }
+                }
+            ]
+        },
     })
 

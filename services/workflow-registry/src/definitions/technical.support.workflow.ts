@@ -21,4 +21,9 @@ export const technicalSupportWorkflow =
             "fix",
             "troubleshoot",
         ],
+        flow: {
+            name:"Technical Support Workflow",
+            queueName:"workflows"
+        }
+        
     });

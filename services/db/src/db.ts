@@ -61,12 +61,17 @@ export class SupabaseService<T extends keyof Database['public']['Tables']> {
     return deletedData;
   }
 
-  async find(id?: string) { // Make id optional
+  async find(options?: {id?: string, limit?: number}) { 
     const supabase = await this.getClient();
     let query = supabase.from(this.tableName).select();
-    if (id) {
-      query = query.eq('id', id); // Directly use .eq for filtering
+    if (options?.id) {
+      query = query.eq('id', options.id); // Directly use .eq for filtering
     }
+
+    if (options?.limit) {
+      query = query.limit(options.limit);
+    }
+    
     const { data, error } = await query;
 
     if (error) {

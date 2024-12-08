@@ -106,5 +106,5 @@
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "include": ["../../supabase/types/index.ts", "src/**/*.ts", "examples/**/*.ts", "../task-manager-service/example.ts", "../task-manager-service/task.manager.service.ts", "old/task.server.ts",  "../socket/src/*.ts", "../db/src/*.ts", "services/response-generation/**/*.ts", "src/processors/email.processor.ts.old", "src/processors/message.processor.ts.old"]
+  "include": ["../../supabase/types/index.ts", "./src/**/*.ts", "examples/**/*.ts", "../task-manager-service/example.ts", "../task-manager-service/task.manager.service.ts", "old/task.server.ts",  "../socket/src/socket.server.ts", "../db/src/*.ts"]
 }

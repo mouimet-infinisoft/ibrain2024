@@ -23,7 +23,7 @@ export class WorkflowRegistryService {
     }
 
     public static createWorkflow(
-        config: Partial<WorkflowDefinition>,
+        config: Omit<WorkflowDefinition, 'id'|'start'>,
     ): WorkflowDefinition {
         return WorkflowRegistry.createWorkflow(config);
     }

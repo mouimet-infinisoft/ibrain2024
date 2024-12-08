@@ -1,9 +1,9 @@
 "use server";
 
 import { getInstance } from "@brainstack/inject";
-import { TaskQueueClient } from "../../../../services/task-manager-service/src/task-queue/TaskQueueClient";
-import { TaskFactory } from "../../../../services/task-manager-service/src/tasks/TaskFactory";
-import { MessageInputTask } from "../../../../services/task-manager-service/src/processors/BaseMessageProcessor";
+import { TaskQueueClient } from "../../../../services/task-manager/src/task-queue/TaskQueueClient";
+import { TaskFactory } from "../../../../services/task-manager/src/tasks/TaskFactory";
+import { MessageInputTask } from "../../../../services/task-manager/src/processors/message/BaseMessageProcessor";
 
 export const sendMsg = async (message: string) => {
   const client = getInstance(TaskQueueClient);
