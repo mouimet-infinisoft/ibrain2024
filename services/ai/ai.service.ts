@@ -78,7 +78,9 @@ export class AiService {
   public async generateObject(
     promptOrMessages: string | CoreMessage[],
     schema: any,
+    maxTokens: number=8000,
     model: string = "genAI:gemini-1.5",
+
   ): Promise<any> { // Add return type for clarity
   
     if (this.aiProviderRegistry === undefined) {
@@ -109,6 +111,7 @@ export class AiService {
       model: languageModel,
       ...processedInput, // Spread the processed input (either prompt or messages)
       schema,
+      maxTokens
     });
   
     return result.object;

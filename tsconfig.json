@@ -34,6 +34,7 @@
     "lib/**/*.ts",
     "services/task-manager-service/src/**/*.ts",
     "services/intent-engine/**/*.ts",
+    "services/workflow-orchestrator/**/*.ts",
   ],
   "exclude": ["node_modules","services"]
 }

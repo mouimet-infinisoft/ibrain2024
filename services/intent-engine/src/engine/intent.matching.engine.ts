@@ -6,50 +6,23 @@ import { LoggerService } from "../../../logger/logger.service";
 import { intentAnalysisSchema } from "../schemas/intent.schema";
 import { CoreMessage } from "ai";
 import dotenv from "dotenv";
+import { IntentClassification } from "../types";
+import {WorkflowRegistryService} from "../../../workflow-registry/src/index";
+import { WorkflowDefinition } from "../../../workflow-registry/src/types";
 
 dotenv.config();
 
-// Multi-Dimensional Intent Representation
-interface WorkflowDefinition {
-    id: string;
-    name: string;
-    description: string;
-    intentSignature: {
-        primaryDomains: string[];
-        secondaryContexts: string[];
-        complexityLevel: number;
-        requiredCapabilities: string[];
-    };
-    triggerKeywords: string[];
-    semanticVector?: number[];
-}
-
-// Type definition for Intent Classification
-interface IntentClassification {
-    embedding: number[];
-    primaryDomain: string;
-    secondaryContext: string;
-    intentStrength: number;
-    requiredCapabilities: string[];
-}
-
 // Advanced Intent Classification System
 export class IntentMatchingEngine {
-    private embeddings: Map<string, number[]>;
     private intentClassifier: any;
-    private workflows: WorkflowDefinition[];
 
     constructor(
         @Inject private aiService: AiService,
         @Inject private logger: LoggerService,
+        @Inject private workflowRegistryService: WorkflowRegistryService
     ) {
         // this.logger.seLogLevel(LogLevel.VERBOSE);
-        this.logger.verbose("Initializing IntentMatchingEngine");
-
-        this.embeddings = new Map();
-        this.workflows = [];
-
-        // Initialize NLP tools
+        this.logger.verbose("Initializing IntentMatchingEngine: ", this.workflowRegistryService.getAllWorkflows());
         this.intentClassifier = new natural.BayesClassifier();
     }
 
@@ -150,7 +123,7 @@ export class IntentMatchingEngine {
                     role: "system",
                     content:
                         `Perform advanced intent classification with multi-dimensional analysis.
-          Provide a JSON response with:
+          Provide a JSON response with maximum token 8000:
           - primaryDomain: Broad category of intent
           - secondaryContext: Specific nuanced context
           - intentStrength: Confidence level of intent
@@ -169,6 +142,7 @@ export class IntentMatchingEngine {
             const intentAnalysis = await this.aiService.generateObject(
                 messages,
                 intentAnalysisSchema,
+                8000
             );
 
             this.logger.verbose("Intent Classification Result", intentAnalysis);
@@ -196,105 +170,64 @@ export class IntentMatchingEngine {
     // Comprehensive Workflow Matching Algorithm
     public async findMostAppropriateWorkflow(
         userInput: string,
-        conversationContext: any,
+        conversationContext: any
     ): Promise<WorkflowDefinition | null> {
         this.logger.info("Finding Most Appropriate Workflow", {
             userInput,
-            workflowCount: this.workflows.length,
+            workflowCount: this.workflowRegistryService.getAllWorkflows().length
         });
 
         try {
             // Classify intent
             const intentClassification = await this.classifyIntent(
                 userInput,
-                conversationContext,
+                conversationContext
             );
 
             // Multi-Dimensional Workflow Matching
-            const scoredWorkflows = this.workflows.map((workflow) => {
+            const scoredWorkflows = this.workflowRegistryService.getAllWorkflows().map((workflow) => {
                 this.logger.verbose(`Evaluating Workflow: ${workflow.name}`);
 
                 // 1. Semantic Similarity
                 const semanticSimilarity = workflow.semanticVector
                     ? this.calculateSemanticSimilarity(
                         intentClassification.embedding,
-                        workflow.semanticVector,
+                        workflow.semanticVector
                     )
                     : 0;
 
-                // 2. Domain Matching
-                const domainMatch =
-                    workflow.intentSignature.primaryDomains.includes(
-                            intentClassification.primaryDomain,
-                        )
-                        ? 1
-                        : 0;
-
+                // 2. Domain Similarity
                 const domainSimilarity = this.calculateDomainSimilarity(
                     workflow.intentSignature.primaryDomains,
-                    [intentClassification.primaryDomain],
+                    [intentClassification.primaryDomain]
                 );
 
                 // 3. Context Alignment
                 const contextAlignment =
                     workflow.intentSignature.secondaryContexts.includes(
-                            intentClassification.secondaryContext,
-                        )
+                        intentClassification.secondaryContext
+                    )
                         ? 1
                         : 0;
 
-                // 4. Capability Matching
-                const capabilityMatch =
-                    intentClassification.requiredCapabilities.some(
-                            (capability) =>
-                                workflow.intentSignature.requiredCapabilities
-                                    .includes(capability),
-                        )
-                        ? 1
-                        : 0;
-
+                // 4. Capability Alignment
                 const capabilityAlignment = this.calculateCapabilityAlignment(
                     intentClassification.requiredCapabilities,
-                    workflow.intentSignature.requiredCapabilities,
+                    workflow.intentSignature.requiredCapabilities
                 );
 
-                // 5. Keyword Matching
-                const keywordMatch = workflow.triggerKeywords.some(
-                        (keyword) =>
-                            userInput.toLowerCase().includes(
-                                keyword.toLowerCase(),
-                            ),
-                    )
-                    ? 1
-                    : 0;
-
                 // Weighted Scoring Algorithm
-                // const score = (semanticSimilarity * 0.4) +
-                //     (domainMatch * 0.2) +
-                //     (contextAlignment * 0.15) +
-                //     (capabilityMatch * 0.15) +
-                //     (keywordMatch * 0.1);
-
-                const score = (semanticSimilarity * 0.5) + // Increased weight
+                const score = (semanticSimilarity * 0.5) + 
                     (domainSimilarity * 0.2) +
                     (contextAlignment * 0.15) +
-                    (capabilityAlignment * 0.15); // More flexible matching
+                    (capabilityAlignment * 0.15);
 
                 this.logger.verbose(`Workflow Scoring for ${workflow.name}`, {
                     semanticSimilarity,
-                    domainMatch,
-                    contextAlignment,
-                    capabilityMatch,
-                    keywordMatch,
-                    totalScore: score,
-                });
-
-                this.logger.verbose(`Workflow Matching Details`, {
-                    inputDomains: intentClassification.primaryDomain,
-                    workflowDomains: workflow.intentSignature.primaryDomains,
                     domainSimilarity,
-                    semanticSimilarity,
+                    contextAlignment,
                     capabilityAlignment,
+                    totalScore: score,
                 });
 
                 return {
@@ -316,117 +249,12 @@ export class IntentMatchingEngine {
                     : "No matching workflow",
             });
 
-            if (sortedWorkflows.length === 0) {
-                // Fallback to most semantically similar workflow
-                const fallbackWorkflow = this.workflows.reduce((
-                    best,
-                    current,
-                ) => this.calculateSemanticSimilarity(
-                        intentClassification.embedding,
-                        current.semanticVector || [],
-                    ) > this.calculateSemanticSimilarity(
-                        intentClassification.embedding,
-                        best.semanticVector || [],
-                    )
-                    ? current
-                    : best
-                );
-                return fallbackWorkflow;
-            }
-
             return sortedWorkflows.length > 0
                 ? sortedWorkflows[0].workflow
                 : null;
         } catch (error) {
             this.logger.error("Error in findMostAppropriateWorkflow", error);
             return null;
-        }
-    }
-
-    // Workflow Registration with Enhanced Preprocessing
-    public async registerWorkflow(workflow: WorkflowDefinition) {
-        this.logger.info(`Registering Workflow: ${workflow.name}`);
-
-        try {
-            // Generate semantic vector for workflow
-            const combinedText = [
-                workflow.name,
-                workflow.description,
-                ...workflow.triggerKeywords,
-            ].join(" ");
-
-            workflow.semanticVector = await this.aiService.createEmbedding(
-                combinedText,
-            );
-
-            this.logger.verbose(
-                `Semantic Vector Generated for ${workflow.name}`,
-                {
-                    vectorDimensions: workflow.semanticVector.length,
-                    triggerKeywords: workflow.triggerKeywords,
-                },
-            );
-
-            // Train intent classifier
-            workflow.triggerKeywords.forEach((keyword) => {
-                this.intentClassifier.addDocument(keyword, workflow.id);
-            });
-
-            this.workflows.push(workflow);
-            this.intentClassifier.train();
-
-            this.logger.info(
-                `Workflow ${workflow.name} Successfully Registered`,
-            );
-        } catch (error) {
-            this.logger.error(
-                `Failed to Register Workflow ${workflow.name}`,
-                error,
-            );
-        }
-    }
-
-    // Continuous Learning Mechanism
-    public async updateWorkflowEmbeddings(
-        workflowId: string,
-        newContext: string,
-    ) {
-        this.logger.info(`Updating Workflow Embeddings`, {
-            workflowId,
-            newContextLength: newContext.length,
-        });
-
-        const workflow = this.workflows.find((w) => w.id === workflowId);
-        if (workflow) {
-            try {
-                const newEmbedding = await this.aiService.createEmbedding(
-                    newContext,
-                );
-
-                // Update semantic vector with moving average
-                if (workflow.semanticVector) {
-                    workflow.semanticVector = workflow.semanticVector.map((
-                        oldVal,
-                        index,
-                    ) => (oldVal + newEmbedding[index]) / 2);
-
-                    this.logger.verbose(
-                        `Workflow ${workflowId} Embedding Updated`,
-                        {
-                            newEmbeddingDimensions: newEmbedding.length,
-                        },
-                    );
-                }
-            } catch (error) {
-                this.logger.error(
-                    `Failed to Update Workflow ${workflowId} Embeddings`,
-                    error,
-                );
-            }
-        } else {
-            this.logger.warn(
-                `Workflow ${workflowId} Not Found for Embedding Update`,
-            );
         }
     }
 }
