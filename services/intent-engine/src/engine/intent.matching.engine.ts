@@ -21,7 +21,7 @@ export class IntentMatchingEngine {
         @Inject private logger: LoggerService,
         @Inject private workflowRegistryService: WorkflowRegistryService
     ) {
-        // this.logger.seLogLevel(LogLevel.VERBOSE);
+        this.logger.seLogLevel(LogLevel.VERBOSE);
         this.logger.verbose("Initializing IntentMatchingEngine: ", this.workflowRegistryService.getAllWorkflows());
         this.intentClassifier = new natural.BayesClassifier();
     }

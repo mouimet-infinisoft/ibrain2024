@@ -24,7 +24,9 @@ export class SupabaseService<T extends keyof Database['public']['Tables']> {
     const supabase = await this.getClient();
     const { data: insertedData, error } = await supabase
       .from(this.tableName)
-      .insert(data as any); // No need to cast as any
+      .insert(data as any)
+      .select()
+      .single()
 
     if (error) {
       throw error;
@@ -36,7 +38,9 @@ export class SupabaseService<T extends keyof Database['public']['Tables']> {
     const { data: updatedData, error } = await supabase
       .from(this.tableName)
       .update(data as any)
-      .eq('id', id); // Directly use .eq for filtering
+      .eq('id', id)
+      .select()
+      .single();
 
     if (error) {
       throw error;

@@ -4,8 +4,7 @@ import { TaskQueueServer } from "../task-queue/TaskQueueServer";
 import { ProcessorLoader } from "../processor-loader/ProcessorLoader";
 
 const server = getInstance(TaskQueueServer)
-server.createQueue({ name: 'message' });
-
+server.createQueue({ name: 'message', concurrency: 3 });
 // Load processors from a specific directory
 ProcessorLoader.loadProcessors(server, path.join(__dirname, '..', 'processors'));
 

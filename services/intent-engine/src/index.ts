@@ -3,6 +3,7 @@ import { IntentMatchingEngine } from "./engine/intent.matching.engine";
 import { WorkflowRegistryService } from "../../workflow-registry/src";
 import { LoggerService } from "../../logger/logger.service";
 import { AiService } from "../../ai/ai.service";
+import { WorkflowDefinition } from "../../workflow-registry/src/types";
 
 @Service
 export class IntentMatchingService {
@@ -18,6 +19,10 @@ export class IntentMatchingService {
             this.loggerService,
             this.workflowRegistryService,
         );
+    }
+
+    async registerWorkflows(workflows: WorkflowDefinition[]) {
+       await Promise.all(workflows.map(w=>this.workflowRegistryService.registerWorkflow(w)))
     }
 
     async findMostAppropriateWorkflow(

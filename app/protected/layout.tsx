@@ -69,9 +69,11 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import React from "react";
+import React, { useEffect } from "react";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent";
 import { signOutAction } from "@/app/actions";
+import useSocketClient from "@/hooks/useSocketClient";
+import { useSpeech } from "@/lib/hooks/use-speech";
 const data = {
   user: {
     name: "shadcn",
@@ -245,6 +247,22 @@ export default function ProtectedLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const { registerEvent, emitEvent, connected } = useSocketClient();
+  const {speak} =  useSpeech()
+
+  useEffect(() => {
+    const unregisterTalk = registerEvent('talk', (message:string) => {
+      console.log('Message from server:', message); 
+      speak(message)
+    });
+
+    return () => {
+      unregisterTalk();
+    };
+  }, [registerEvent]); 
+
+  
   return (
     <SidebarProvider>
       <Sidebar variant="inset">

@@ -3,7 +3,6 @@ import {WorkflowRegistryService} from "..";
 export const legacyCodeRefactoringWorkflow  = 
     // Legacy Code Refactoring Workflow
     WorkflowRegistryService.createWorkflow({
-        id: "legacy_code_refactoring",
         name: "Legacy Code Refactoring Workflow",
         description: "Comprehensive strategy for modernizing and improving existing codebase",
         intentSignature: {

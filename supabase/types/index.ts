@@ -34,6 +34,39 @@ export type Database = {
   }
   public: {
     Tables: {
+      conversation_contexts: {
+        Row: {
+          context: Json | null
+          created_at: string | null
+          id: string
+          input: string | null
+          response: string | null
+          type: string | null
+          updated_at: string | null
+          workflow_id: string | null
+        }
+        Insert: {
+          context?: Json | null
+          created_at?: string | null
+          id?: string
+          input?: string | null
+          response?: string | null
+          type?: string | null
+          updated_at?: string | null
+          workflow_id?: string | null
+        }
+        Update: {
+          context?: Json | null
+          created_at?: string | null
+          id?: string
+          input?: string | null
+          response?: string | null
+          type?: string | null
+          updated_at?: string | null
+          workflow_id?: string | null
+        }
+        Relationships: []
+      }
       conversations: {
         Row: {
           created_at: string

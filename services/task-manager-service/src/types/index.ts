@@ -1,11 +1,3 @@
-// Shared base interfaces
-// export interface BaseTask {
-//   type: string;
-//   action: string;
-//   priority?: 'low' | 'medium' | 'high';
-//   retryAttempts?: number;
-//   [key: string]: any;
-// }
 
 import { Job, JobsOptions } from "bullmq";
 
@@ -21,7 +13,6 @@ export interface BaseTask {
 export type TaskProcessor<T extends BaseTask = BaseTask> = 
   (job: T) => Promise<any>;
 
-// export type TaskProcessor<T extends BaseTask = BaseTask> = (task: T) => Promise<{ result: any }>;
 
 export interface QueueConfig {
   name: string;

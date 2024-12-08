@@ -2,7 +2,6 @@ import {WorkflowRegistryService} from "..";
 
 export const featureDevelopmentWorkflow =    // Feature Development Workflow
     WorkflowRegistryService.createWorkflow({
-        id: "feature_development_workflow",
         name: "Feature Development and Integration Workflow",
         description: "End-to-end process for designing, implementing, and integrating new software features",
         intentSignature: {

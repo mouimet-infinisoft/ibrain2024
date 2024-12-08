@@ -1,13 +1,11 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import FileExplorer from "./components/FileExplorer";
 import { initialFileSystem } from "./mock/initialFileSystem";
 import { useFileOperations } from "./hooks/useFileOperations";
 import FileTabs from "./components/FileTabs";
 import { Editors } from "./components/Editors";
 import { SpeechToText } from "@/components/ui/speech-to-text";
-import useSocketClient from "@/hooks/useSocketClient";
-import { useSpeech } from "@/lib/hooks/use-speech";
 import { sendMsg } from "./actions/send.message";
 
 
@@ -71,48 +69,6 @@ const MonacoCodeEditorPage: React.FC = () => {
       };
       
 
-      const { registerEvent, emitEvent, connected } = useSocketClient();
-      const {speak} =  useSpeech()
-
-      useEffect(() => {
-        const unregisterTalk = registerEvent('talk', (message:string) => {
-          console.log('Message from server:', message); // This will log "Hello boss!"
-          speak(message)
-          // ... update your component's state or do something with the message
-        });
-    
-        return () => {
-          unregisterTalk();
-        };
-      }, [registerEvent]); 
-
-      useEffect(() => {
-    
-        const unregisterNewMessage = registerEvent('newMessage', (message) => {
-          console.log('New message received:', message);
-          // Update your UI based on the received message
-        });
-    
-        const unregisterUserJoined = registerEvent('userJoined', (user) => {
-          console.log('User joined:', user);
-        });
-    
-    
-    
-        // Emit an event (Example)
-        if (connected) {
-          emitEvent('joinRoom', 'my-room');
-          emitEvent('sendMessage', 'Hello from client!');
-        }
-    
-    
-        return () => {
-            unregisterNewMessage(); // Clean up the event listener on unmount
-            unregisterUserJoined();
-    
-        };
-    
-      }, [registerEvent, connected, emitEvent]);
 
     return (
       <div className="flex h-screen">

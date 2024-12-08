@@ -111,7 +111,7 @@ export class WorkflowRegistry {
         // Validate and set default values
         const workflow: WorkflowDefinition = {
             // Generate a unique ID if not provided
-            id: config.id || uuidv4(),
+            id: uuidv4(),
 
             // Required properties with default fallbacks
             name: config.name || 'Unnamed Workflow',

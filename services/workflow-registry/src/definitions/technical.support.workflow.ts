@@ -5,7 +5,6 @@ export const technicalSupportWorkflow =
 
     // Technical Support Workflow
     WorkflowRegistryService.createWorkflow({
-        id: "technical_support",
         name: "Technical Support Workflow",
         description: "Troubleshooting and technical problem resolution",
         intentSignature: {

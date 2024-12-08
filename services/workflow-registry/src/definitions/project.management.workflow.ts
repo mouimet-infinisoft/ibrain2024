@@ -3,7 +3,6 @@ import {WorkflowRegistryService} from "..";
 
 export const projectManagementWorkflow = WorkflowRegistryService.createWorkflow(
     {
-        id: "project_management",
         name: "Project Management Workflow",
         description: "Comprehensive project planning and tracking",
         intentSignature: {
